@@ -1,17 +1,16 @@
 # BIO490S - Methods in Computational Biology & Genomics
 
 Instructor: C. Ryan Campbell
-Email: [link]
-(mailto:c.ryan.campbell@duke.edu)
+Email: [c.ryan.campbell@duke.edu](c.ryan.campbell@duke.edu)
 Office: BioSci 311
-Hours: Mon 3-5, Wed 10-12
+Hours: Mon 3-5, Wed 10-12, or by appointment
 
 ## Learning Objectives			
 1. teaching programming basics within a biology framework (i.e. basic building blocks for students to use biological software):
-	* using command line interfaces		
-	* accessing supercomputers/clusters		
-	* building scripts		
-	* using biological programs (bwa, samtools, etc)		
+	* using command line interfaces
+	* accessing supercomputers/clusters
+	* building scripts
+	* using biological programs (bwa, samtools, etc)
 
 2. the statistics that underlie these tools, the whole suite of measures used in "genomics" and probably not covered in Bio 204.
 
@@ -22,6 +21,7 @@ Hours: Mon 3-5, Wed 10-12
 - STA101 or higher OR BIO204
 - Some coding background (computer language independent)
 
+### Schedule
 |Day|Date|Topic|Due|
 |---|---|------------------|---|
 |Tu - Lecture|42612|Welcome/Syllabus/"What is 'Genomics'?"||
@@ -54,4 +54,4 @@ Hours: Mon 3-5, Wed 10-12
 |Th - "Lab"|42705|Project Presentations/Student Choice Lecture||
 |Tu - Lecture|42710|Project Presentations|Final Project (Present)|
 |Th - "Lab"|42712|Project Presentations|Final Project (Present)|
-|Exam||Final Exam - In Class Activity/Mini-Project||
+|Exam| |Final Exam - In Class Activity/Mini-Project||
