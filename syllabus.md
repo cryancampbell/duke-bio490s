@@ -23,35 +23,35 @@ Hours: Mon 3-5, Wed 10-12, or by appointment
 
 ### Schedule
 |Day|Date|Topic|Due|
-|---|---|------------------|---|
-|Tu - Lecture|42612|Welcome/Syllabus/"What is 'Genomics'?"||
-|Th - "Lab"|42614|Setup - Terminal Basics||
-|Tu - Lecture|42984|How We Got Here - History of "Genomics"||
-|Th - "Lab"|42986|Intro to git||
-|Tu - Lecture|42991|Genomic Methods (Long v. Short Reads)||
-|Th - "Lab"|42993|Intro to bin/bash language||
-|Tu - Lecture|42998|SNPs v. Genomes||
-|Th - "Lab"|43000|Writing a Script, Loops/Boolean|Project Choice|
-|Tu - Lecture|43005|Misc-omes: Transcriptomes/Epigenomes/etc||
-|Th - "Lab"|43007|Regular Expressions - grep|HW: Regular Expression/grep|
-|Tu - Lecture|42647|Statistical Methods (pt I) - BLAST, BUSCO, measures of similarity||
-|Th - "Lab"|42649|Stat Methods pt 1||
-|Tu - Lecture|42654|Statistical Methods (pt II) - Permutation Tests, experimental stats||
-|Th - "Lab"|42656|Stat Methods pt 2|Project Sketch (Methods)|
-|Tu - No Class|42661|Fall Break -- No Class||
-|Th - Lecture|42663|Future Genomic Tech - TenX, long reads, Oxford Nano||
-|Tu - Lecture|42668|Statistal Methods (pt III) - Bayesian Stats, Simulations|HW: Statistical Methods|
-|Th - "Lab"|42670|Stat Methods pt 3||
-|Tu - Lecture|42675|What can we learn from genomes? (Pop Gen, PSMC)||
-|Th - "Lab"|42677|Submitting to the Cluster||
-|Tu - Lecture|42682|Admixture/PopGen from Genomes|HW: Paper Assessment|
-|Th - "Lab"|42684|Downloading Public Data - SRA||
-|Tu - Lecture|42689|Genomic "Islands" of Speciation|Project Rough Draft 1|
-|Th - "Lab"|42691|Using Software - Readme.txt and Flags!||
-|Tu - Lecture|42696|New Directions in Genomics: Introns & Alternative Splicing||
-|Th - "Lab"|42698|Git repositories and version tracking||
-|Tu - Lecture|42703|Non-Model Genomics - Possibilities and Pitfalls||
-|Th - "Lab"|42705|Project Presentations/Student Choice Lecture||
-|Tu - Lecture|42710|Project Presentations|Final Project (Present)|
-|Th - "Lab"|42712|Project Presentations|Final Project (Present)|
+|-------------|-------------|-----------------------------------------------------|-------------|
+|Tu - Lecture|Aug 29|Welcome/Syllabus/"What is 'Genomics'?"||
+|_Th - Lab_|_Aug 31_|_Setup - Terminal Basics_||
+|Tu - Lecture|Sep 5|How We Got Here - History of "Genomics"||
+|_Th - Lab_|_Sep 7_|_Intro to git_||
+|Tu - Lecture|Sep 12|Genomic Methods (Long v. Short Reads)||
+|_Th - Lab_|_Sep 14_|_Intro to bin/bash language_||
+|Tu - Lecture|Sep 19|SNPs v. Genomes||
+|_Th - Lab_|_Sep 21_|_Writing a Script, Loops/Boolean_|_Project Choice_|
+|Tu - Lecture|Sep 26|Misc-omes: Transcriptomes/Epigenomes/etc||
+|_Th - Lab_|_Sep 28_|_Regular Expressions - grep_|_HW: Regular Expression/grep_|
+|Tu - Lecture|Oct 3|Statistical Methods (pt I) - BLAST, BUSCO, measures of similarity||
+|_Th - Lab_|_Oct 5_|_Stat Methods pt 1_||
+|Tu - Lecture|Oct 10|Statistical Methods (pt II) - Permutation Tests, experimental stats||
+|_Th - Lab_|_Oct 12_|_Stat Methods pt 2_|_Project Sketch (Methods)_|
+|Tu - No Class|Oct 17|Fall Break -- No Class||
+|Th - Lecture|Oct 19|Future Genomic Tech - TenX, long reads, Oxford Nano||
+|Tu - Lecture|Oct 24|Statistal Methods (pt III) - Bayesian Stats, Simulations|HW: Statistical Methods|
+|_Th - Lab_|_Oct 26_|_Stat Methods pt 3_||
+|Tu - Lecture|Oct 31|What can we learn from genomes? (Pop Gen, PSMC)||
+|_Th - Lab_|_Nov 2_|_Submitting to the Cluster_||
+|Tu - Lecture|Nov 7|Admixture/PopGen from Genomes|HW: Paper Assessment|
+|_Th - Lab_|_Nov 9_|_Downloading Public Data - SRA_||
+|Tu - Lecture|Nov 14|Genomic "Islands" of Speciation|Project Rough Draft 1|
+|_Th - Lab_|_Nov 16_|_Using Software - Readme.txt and Flags!_||
+|Tu - Lecture|Nov 21|New Directions in Genomics: Introns & Alternative Splicing||
+|_Th - Lab_|_Nov 23_|_THANKSGIVING -- No Class Git repositories and version tracking_||
+|Tu - Lecture|Nov 28|Non-Model Genomics - Possibilities and Pitfalls||
+|_Th - Lab_|_Nov 30_|_Project Presentations/Student Choice Lecture_||
+|Tu - Lecture|Dec 6|Project Presentations|Final Project (Present)|
+|Th - Lecture|Dec 8|Project Presentations|Final Project (Present)|
 |Exam| |Final Exam - In Class Activity/Mini-Project||
