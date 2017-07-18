@@ -3,5 +3,5 @@ Duke Biology Bass Course - BIO490S: Methods in Computational Biology &amp; Genom
 
 Course page for Bio490S
 
-Syllabus:
+Viewable Syllabus:
 http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob/master/syllabus.html
