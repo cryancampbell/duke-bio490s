@@ -52,6 +52,6 @@ Hours: Mon 3-5, Wed 10-12, or by appointment
 |_Th - Lab_|_Nov 23_|_THANKSGIVING -- No Class Git repositories and version tracking_||
 |Tu - Lecture|Nov 28|Non-Model Genomics - Possibilities and Pitfalls||
 |_Th - Lab_|_Nov 30_|_Project Presentations/Student Choice Lecture_||
-|Tu - Lecture|Dec 6|Project Presentations|Final Project (Present)|
-|Th - Lecture|Dec 8|Project Presentations|Final Project (Present)|
+|Tu - Lecture|Dec 5|Project Presentations|Final Project (Present)|
+|Th - Lecture|Dec 7|Project Presentations|Final Project (Present)|
 |Exam| |Final Exam - In Class Activity/Mini-Project||
