@@ -15,7 +15,7 @@
 %	PACKAGES AND THEMES
 %----------------------------------------------------------------------------------------
 
-\documentclass{beamer}
+\documentclass[14pt]{beamer}
 
 \mode<presentation> {
 
@@ -79,6 +79,7 @@
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{hyperref}
+\usepackage{helvet}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -135,6 +136,7 @@ Duke University \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Course Objectives}
 %modified from syllabus
+\small
 \begin{block}{Objective 1}<1->
 Learning programming basics and best practices within a biology framework (i.e. basic building blocks for students to use biological software)
 \end{block}
@@ -146,7 +148,7 @@ Learning the statistics that underlie these tools and the rapidly evolving suite
 \begin{block}{Objective 3}<3->
 Combine 1 and 2 to test biological hypotheses with RNAseq data and present those results in an "IMRD" format (pronounced EM-rod)
 \end{block}
-
+\normalsize
 
 \end{frame}
 %------------------------------------------------
@@ -166,9 +168,10 @@ Combine 1 and 2 to test biological hypotheses with RNAseq data and present those
 \begin{frame}
 \frametitle{Course Policies}
 \begin{itemize}
-\item<1-> Group Work vs. Own Work
-\item<2-> No Direct Attendence Policy
-\item<3-> Interact and Contribute in Class
+	\item<1-> Honor Code
+	\item<2-> Group Work vs. Own Work
+	\item<3-> No Direct Attendence Policy
+	\item<4-> Interact and Contribute in Class
 \end{itemize}
 
 %group work v. own work
@@ -181,6 +184,7 @@ Combine 1 and 2 to test biological hypotheses with RNAseq data and present those
 \begin{itemize}
 \item<1-> Latest pre-class email time (5pm? 9pm?)
 \item<2-> Slack?
+\item<3-> Office Hours?
 \end{itemize}
 %
 \end{frame}
@@ -357,6 +361,7 @@ Combine 1 and 2 to test biological hypotheses with RNAseq data and present those
 %------------------------------------------------
 \begin{frame}
 \frametitle{What is/are Genomics?}
+\footnotesize
 \begin{itemize}
 	\item<2-> Within the field of molecular biology, genomics is the study of genomes, the complete set of genetic material within an organism.
 	\item<3-> Genomics involves the sequencing and analysis of genomes. 
@@ -364,6 +369,7 @@ Combine 1 and 2 to test biological hypotheses with RNAseq data and present those
 	\item<5-> The field also includes studies of intragenomic (within the genome) phenomena such as heterosis (hybrid vigour), epistasis (effect of one gene on another), pleiotropy (one gene affecting more than one trait) and other interactions between loci and alleles within the genome.
 	\item<6-> In contrast to genetics, which refers to the study of individual genes and their roles in inheritance, genomics uses high throughput DNA sequencing and bioinformatics to assemble, and analyze the function and structure of entire genomes.
 \end{itemize}
+\normalsize
 \end{frame}
 %------------------------------------------------
 \begin{frame}
