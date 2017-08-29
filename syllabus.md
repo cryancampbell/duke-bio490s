@@ -3,23 +3,33 @@
 Instructor: C. Ryan Campbell
 Email: [c.ryan.campbell@duke.edu](c.ryan.campbell@duke.edu)
 Office: BioSci 311
-Hours: Mon 3-5, Wed 10-12, or by appointment
+Hours: TBD, or by appointment
 
 ## Learning Objectives			
-1. teaching programming basics within a biology framework (i.e. basic building blocks for students to use biological software):
+1. Teaching programming basics and best practices within a biology framework (i.e. basic building blocks for students to use biological software):
 	* using command line interfaces
 	* accessing supercomputers/clusters
 	* building scripts
 	* using biological programs (bwa, samtools, etc)
 
-2. the statistics that underlie these tools, the whole suite of measures used in "genomics" and probably not covered in Bio 204.
+2. Teaching the statistics that underlie these tools and the rapidly evolving suite of measures used in "genomics".
 
-3. combine #1 & #2 to test one of a range of biological questions, answerable with RNAseq data, such as: what is the effect of hibernation (lemur), morph type (cricket), tissue type (crayfish), closing mechanism (venus flytrap), and salty ecotypes (cotton) on gene expression across the tree of life.
+3. Combine 1 and 2 to test biological hypotheses with RNAseq data, such as: what is the effect of hibernation (lemur), morph type (cricket), tissue type (crayfish), closing mechanism (venus flytrap), and salty ecotypes (cotton) on gene expression across the tree of life.
 
 ### Prerequisites
 - One of BIO201/202
 - STA101 or higher OR BIO204
 - Some coding background (computer language independent)
+
+### Course Grade
+|Category|Item|Relative Value|Percent of Grade|
+|--------|----|-------|----------------|
+|Project|Proposal|n|11%|
+|Project|Draft Project - First Pass|2n|22%|
+|Project|Final Project|3n|33%|
+|Class|Assignments|2n|22%|
+|Class|Class Participation|n|11%|
+|Free Point|Free Point|1|1%|
 
 ### Schedule
 |Day|Date|Topic|Due|
