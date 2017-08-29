@@ -33,7 +33,7 @@ Hours: TBD, or by appointment
 
 ## Schedule
 |Day|Date|Topic|Due|
-|-------------|-------------|-----------------------------------------------------|-------------|
+|-------------|---------------|-----------------------------------------------------|-------------|
 |Tu - Lecture|Aug 29|Welcome/Syllabus/"What is 'Genomics'?"||
 |_Th - Lab_|_Aug 31_|_Computer Setup_||
 |Tu - Lecture|Sep 5|SNPs vs. Genomes||
@@ -79,4 +79,4 @@ _Regular Expressions - grep_
 
 
 ## Diversity
-As an instructor I will endeavor to promote diversity of all kinds in this course and in the greater University commmunity as a whole. This includes, but is not limited to, the selection of photos for my teaching slides, the intentional usage of "they" as a third-person singular pronoun (so as not to assume gender) and the identifcation of outstanding scientists who are not white, cis-gendered, heterosexual men. I will bring up these issues in class as often as is appropriate to the material, and will always be open to dicussing them outside of class.
+As an instructor I will endeavor to promote diversity of all kinds in this course and in the greater University commmunity as a whole. This includes, but is not limited to, the selection of photos for my teaching slides, the intentional usage of "they" as a third-person singular pronoun (so as not to assume gender) and the identification of outstanding scientists who are not white, cis-gendered, heterosexual men. I will bring up these issues in class as often as is appropriate to the material and will always be open to dicussing them outside of class.
