@@ -6,7 +6,12 @@ Course page for Bio490S
 Viewable Syllabus:
 http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob/master/syllabus.html
 
-%%%Important Messages and Links Will Go Here%%%
+-------------------------------------------------
+----Important Messages and Links Will Go Here----
+-------------------------------------------------
+
+Aug 31
+as usual, bring laptops to class
 
 Aug 29
 Student Info Form
