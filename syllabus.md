@@ -36,7 +36,7 @@ Hours: 11am-1pm Mondays, or by appointment
 |-------------|---------------|-----------------------------------------------------|-------------|
 |Tu - Lecture|Aug 29|Welcome/Syllabus/"What is 'Genomics'?"||
 |_Th - Lab_|_Aug 31_|_Computer Setup_||
-|Tu - Lecture|Sep 5|SNPs vs. Genomes||
+|Tu - Lecture|Sep 5|Genetics vs. Genomics||
 |_Th - Lab_|_Sep 7_|_Intro to git_||
 |Tu - Lecture|Sep 12|How We Got Here - History of "Genomics"||
 |_Th - Lab_|_Sep 14_|_Intro to bin/bash language_||
