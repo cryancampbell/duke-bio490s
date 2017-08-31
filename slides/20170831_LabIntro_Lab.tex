@@ -163,13 +163,27 @@ Duke University \\ % Your institution for the title page
 \begin{itemize}
 	\item Which tasks are good for each of the following?
 	\begin{itemize}
-	\item<+-> RNAseq analysis % (DCC)
-	\item<+-> Statistical analysis % (DCC/Local)
-	\item<+-> Sequence data `cleaning' % (DCC)
-	\item<+-> Producing plots % (Local)
+	\item<+-> RNAseq analysis 
+	\item<+-> Statistical analysis 
+	\item<+-> Sequence data `cleaning' 
+	\item<+-> Producing plots 
 	\end{itemize}
 \end{itemize}
 \end{frame}
+
+%------------------------------------------------
+%\begin{frame}
+%\frametitle{Local vs. Cluster}
+%\begin{itemize}
+%	\item Which tasks are good for each of the following?
+%	\begin{itemize}
+%	\item RNAseq analysis (DCC)
+%	\item Statistical analysis (DCC/Local)
+%	\item Sequence data `cleaning' (DCC)
+%	\item Producing plots (Local)
+%	\end{itemize}
+%\end{itemize}
+%\end{frame}
 
 %------------------------------------------------
 \subsection{Tools}
@@ -334,13 +348,73 @@ Duke University \\ % Your institution for the title page
 \frametitle{R-Studio Test}
 \begin{itemize}
 	\item Download my .Rmd script and datafile from github
+	\begin{itemize}
+		\item hypoxia analysis Rmd
+		\item hsap hypoxia gene exp FORCLASS diff
+	\end{itemize}
 	\item Save it to your repo
 	\item Run it in R-Studio to produce the graph
-	\item Make some slight changes
-	\item Comment them in your version of the .Rmd
-	\item Produce a slightly different graphed output
 \end{itemize}
 \end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{R-Studio Test}
+\includegraphics[width=0.8\linewidth]{images_20170831_rstudioplot.png}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{R-Studio Assignment}
+\begin{itemize}
+	\item Pick a different Gene Family
+	\item Modify my code and plot the data
+	\item Turn in -
+	\begin{itemize}
+		\item Your Plot
+		\item A short paragraph about which gene family you picked an the results you saw
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{RNAseq Diff Files}
+\begin{itemize}
+	\item Output from a comparison across conditions
+	\item Columns -
+	\begin{itemize}
+		\item gene family
+		\item sample 1 and 2 - experimental condition of the sample
+		\item status - were there non-zero values on both samples
+		\item value 1 and 2 - relative amount of expression measured
+		\item log fold change - difference between conditions, roughly
+		\begin{itemize}
+			\item negative numbers = decrease in expression from 1 to 2
+		\end{itemize}
+		\item test stat - test statistic
+		\item p-value
+		\item q-value
+		\item significant - less than .05 p-val
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Hypoxia Gene Families}
+\begin{itemize}
+	\item TOMM - Translocase of outer mitochondrial membrane
+	\item TIMM - Translocase of inner mitochondrial membrane
+	\item ZNF - Zinc Finger
+	\item RAS - involved in transmitting signals within cells
+	\item OR - Olfactory Receptors
+	\item PK - Protein Kinases
+	\item HK - Hexokinase
+	\item NFK - Nuclear Factor Kappa
+\end{itemize}
+\end{frame}
+
 
 %------------------------------------------------
 \begin{frame}
