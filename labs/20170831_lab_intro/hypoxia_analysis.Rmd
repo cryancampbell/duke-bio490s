@@ -4,14 +4,14 @@ output: html_document
 ---
 
 Data description - short version of RNAseq output from cufflinks, comparing human cells in hypoxic and normal conditions, gene families included are:
-TOMM - 
-TIMM - 
-ZNF - 
-RAS - 
-OR - 
-PK - 
-HK - 
-NFK -
+TOMM - Translocase of outer mitochondrial membrane
+TIMM - Translocase of inner mitochondrial membrane
+ZNF - Zinc Finger
+RAS - involved in transmitting signals within cells
+OR - Olfactory Receptors
+PK - Protein Kinases
+HK - Hexokinase
+NFK - Nuclear Factor Kappa
 
 Let's explore the data --
 
