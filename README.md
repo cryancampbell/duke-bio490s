@@ -9,6 +9,11 @@ http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob
 -------------------------------------------------
 ----Important Messages and Links Will Go Here----
 -------------------------------------------------
+Sept 05
+Fill this out to plan new office hours:
+https://www.when2meet.com/?6305474-AySco
+HW link (Lab 1: RStudio Hypoxia Plot Assignment) due 3pm Sept 7th
+https://www.dropbox.com/request/YwpTavBaghk7bj4bAiYk
 
 Aug 31
 as usual, bring laptops to class
