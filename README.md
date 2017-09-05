@@ -10,6 +10,8 @@ http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob
 ----Important Messages and Links Will Go Here----
 -------------------------------------------------
 Sept 05
+Dotstorming -> "What is Genomics"?
+https://dotstorming.com/b/59ae934397b729fa05814972
 Fill this out to plan new office hours:
 https://www.when2meet.com/?6305474-AySco
 HW link (Lab 1: RStudio Hypoxia Plot Assignment) due 3pm Sept 7th
