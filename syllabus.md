@@ -3,7 +3,7 @@
 Instructor: C. Ryan Campbell
 Email: [c.ryan.campbell@duke.edu](c.ryan.campbell@duke.edu)
 Office: BioSci 311
-Hours: 11am-1pm Mondays, or by appointment
+Hours: 11am-1pm Fridays and by appointment
 
 ## Learning Objectives			
 1. Teaching programming basics and best practices within a biology framework (i.e. basic building blocks for students to use biological software):
