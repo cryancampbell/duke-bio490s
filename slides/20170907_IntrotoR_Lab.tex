@@ -285,10 +285,10 @@ Duke University \\ % Your institution for the title page
 	\item<+-> What are the arguments for these functions?
 	\item<+-> How would you go about answering this question?
 	%%UNCOMMENT
-	%%\begin{itemize}
-	%%	\item<+-> type ?read.table
-	%%	\item<+-> begin typing ``read.table('' and press ``TAB''
-	%%\end{itemize}
+	\begin{itemize}
+		\item<+-> type ?read.table
+		\item<+-> begin typing ``read.table('' and press ``TAB''
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -408,8 +408,30 @@ Duke University \\ % Your institution for the title page
 \frametitle{A Simple T-Test}
 \begin{itemize}
 	\item To conduct a simple T-Test I'm going to generate some random, normal data:
-	\footnotesize
-	\item[] (pick your own values for the n and mean to fill out the class chart)
+	\begin{itemize}
+		\footnotesize
+		\item (pick your own values for the n and mean to fill out the class chart)
+	\end{itemize}
+	\ttfamily
+	\begin{block}{}
+		\item[] > meanzero <- rnorm(100,0,1)
+		\item[] > meanthree <- rnorm(100,3,1)
+	\end{block}
+	\sffamily
+	\normalsize
+	\item How would I confirm that this data is normally distributed?
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{A Simple T-Test}
+\begin{itemize}
+	\item To conduct a simple T-Test I'm going to generate some random, normal data:
+	\begin{itemize}
+		\footnotesize
+		\item (pick your own values for the n and mean to fill out the class chart)
+	\end{itemize}
 	\ttfamily
 	\begin{block}{}
 		\item[] > meanzero <- rnorm(100,0,1)
@@ -419,12 +441,12 @@ Duke University \\ % Your institution for the title page
 	\normalsize
 	\item How would I confirm that this data is normally distributed?
 	%%UNCOMMENT
-	%\ttfamily
-	%\footnotesize
-	%\begin{block}{}
-	%	\item[] > hist(meanzero, xlim = c(-3,6))
-	%	\item[] > hist(meanthree, add = T, col = "gray")
-	%\end{block}
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+		\item[] > hist(meanzero, xlim = c(-3,6))
+		\item[] > hist(meanthree, add = T, col = "gray")
+	\end{block}
 \end{itemize}
 \end{frame}
 

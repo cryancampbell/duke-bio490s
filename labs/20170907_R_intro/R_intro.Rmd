@@ -1,0 +1,55 @@
+---
+title: "R Intro Lab"
+output: html_document
+---
+
+```{r}
+setwd("~/Documents/git_repos/duke-bio490s/labs/20170907_R_intro/")
+
+hypoxiaRaw <- read.table("hsap_hypoxia_gene_exp_FORCLASS.diff", header = TRUE, dec = ".")
+
+hypoxiaTested <- hypoxiaRaw[hypoxiaRaw$status == "OK",]
+
+```
+
+
+Variables
+```{r}
+a <- c(15,12,10,93)
+
+a[2]
+
+a[c(2,4)]
+
+a[c(FALSE,TRUE,TRUE,FALSE)]
+
+a * 5
+```
+
+Data Frames and Matrices
+```{r}
+hypoxiaTested[,1]
+
+hypoxiaRaw <- read.table("hsap_hypoxia_gene_exp_FORCLASS.diff", header = TRUE, dec = ".")
+
+hypoxiaTested$gene_family
+
+hypoxiaTested$r_value <- ( hypoxiaTested$p_value + hypoxiaTested$q_value ) / 2
+
+```
+
+T-Test
+```{r}
+meanzero <- rnorm(100,0,1)
+
+meanthree <- rnorm(100,3,1)
+
+hist(meanzero)
+
+hist(meanthree)
+
+hist(meanzero, xlim = c(-3,6))
+hist(meanthree, add = T, col = "gray")
+
+t.test(meanzero,meanthree,var.equal = T)
+```
