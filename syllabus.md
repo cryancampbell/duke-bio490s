@@ -38,10 +38,10 @@ Hours: 11am-1pm Fridays and by appointment
 |_Th - Lab_|_Aug 31_|_Computer Setup_||
 |Tu - Lecture|Sep 5|Genetics vs. Genomics||
 |_Th - Lab_|_Sep 7_|_Intro to R_|_R Setup Assignment_|
-|Tu - Lecture|Sep 12|How We Got Here - History of "Genomics"||
+|Tu - Lecture|Sep 12|RNAseq|_read Wang et al_|
 |_Th - Lab_|_Sep 14_|_Intro to bin/bash language_|_R T-Test Assignment_|
-|Tu - Lecture|Sep 19|Genomic Methods (Long v. Short Reads)||
-|_Th - Lab_|_Sep 21_|_Downloading Public Data - SRA_|_Project Choice_|
+|_Tu - Lab_|_Sep 19_|_Downloading Public Data - SRA_|_Bring one possible dataset_|
+|Th - Lecture|Sep 21|Guest Lecture - Dr. Peter Larsen||
 |Tu - Lecture|Sep 26|Misc-omes: Transcriptomes/Epigenomes/etc||
 |_Th - Lab_|_Sep 28_|_Using Software - Readme.txt and Flags!_||
 |Tu - Lecture|Oct 3|Experimental Methods - Setting up RNAseq||
@@ -49,10 +49,10 @@ Hours: 11am-1pm Fridays and by appointment
 |Tu - Lecture|Oct 10|Statistical Methods - Analyzing RNAseq||
 |_Th - Lab_|_Oct 12_|_RNAseq Methods_|_Project Proposal (Methods)_|
 |Tu - No Class|Oct 17|Fall Break -- No Class||
-|Th - Lecture|Oct 19|Potential Data Visualization Module||
-|_Tu - Lab_|_Oct 24_|_Potential Data Visualization Module_||
+|Th - Lecture|Oct 19|Data Visualization Module - Confirmed!||
+|_Tu - Lab_|_Oct 24_|_Data Visualization Module - Confirmed!_||
 |Th - Lecture|Oct 26|Statistical Methods (pt I) - BLAST, BUSCO, measures of similarity||
-|_Tu - Lab_|_Oct 31_|_Stat Methods pt 1_||
+|_Tu - Lab_|_Oct 31_|_Stat Methods pt 1_|Data Viz HW Due|
 |Th - Lecture|Nov 2|Statistical Methods (pt II) - Permutation Tests, experimental stats||
 |_Tu - Lab_|_Nov 7_|_Stat Methods pt 2_|_Project Draft - First Pass_|
 |Th - Lecture|Nov 9|Statistal Methods (pt III) - Bayesian Stats, Simulations|HW: Statistical Methods|
@@ -68,6 +68,7 @@ Hours: 11am-1pm Fridays and by appointment
 
 ###Possible Topics
 ####Lecture
+Genomic Methods (Long v. Short Reads)
 Non-Model Genomics - Possibilities and Pitfalls
 Admixture/PopGen from Genomes
 Genomic "Islands" of Speciation
