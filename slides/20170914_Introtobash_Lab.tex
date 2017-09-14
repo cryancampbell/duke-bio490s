@@ -1,0 +1,625 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[14pt]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class slide themes
+\usetheme{Madrid} %i was using this one
+
+% Beamer class color themes
+
+%\usecolortheme{albatross}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{hyperref}
+\usepackage{helvet}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[bash \& SLURM]{Introduction to bash \& SLURM} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{C. Ryan Campbell} % Your name
+\institute[Duke] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Duke University \\ % Your institution for the title page
+\medskip
+\textit{c.ryan.campbell@duke.edu} % Your email address
+}
+\date{07 Sept 2017} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Goals} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Today's Goals}
+\begin{itemize}
+	\item<+-> Log into the cluster
+	\item<+-> Learn some basic commands
+	\begin{itemize}
+		\item<+-> cd, mkdir, ls, scp
+		\item<+-> sort, uniq, cut, nano
+	\end{itemize}
+	\item<+-> Learn some advanced commands
+	\begin{itemize}
+		\item<+-> grep, sed
+	\end{itemize}
+	\item<+-> Submit a cluster job
+	\item<+-> See how far we get
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Cluster Basics}
+%------------------------------------------------
+
+%------------------------------------------------
+\subsection{Logging On}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Logging On \& Aliases}
+\begin{itemize}
+	\item Use command ``ssh''
+	\item Logs on to one of two compute nodes:
+	\ttfamily
+	\begin{block}{}
+		\item[] ssh <netid>@dscr-slogin-01.oit.duke.edu
+		\item[] ssh <netid>@dscr-slogin-02.oit.duke.edu
+	\end{block}
+	\sffamily
+	\item Your terminal window is now on the computer ``dscr-slogin-01.oit.duke.edu''
+	\item Note the command prompt
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Logging On \& Aliases}
+\begin{itemize}
+	\item<+-> To log in from off campus use a VPN
+	\item vpn.duke.edu
+	\item[]
+	\item<+-> Once you install the software you can access the slogin computer from off campus
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Logging On \& Aliases}
+\begin{itemize}
+	\item Aliases are used to save common commands
+	\item On my computer the ssh login is saved as ``DSCR''
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+		\item[] alias DSCR="ssh cc216@dscr-slogin-01.oit.duke.edu"
+	\end{block}
+	\sffamily
+	\normalsize
+	\item To set up an alias on your local machine edit your bash profile
+	\ttfamily
+	\begin{block}{}
+		\item[] nano \~/.bash\_profile
+	\end{block}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{nano}
+\begin{itemize}
+	\item nano is a text-based text editor
+	\item<+-> Just running ``\texttt{nano}'' opens an unsaved text document
+	\item<+-> Adding a filename ``\texttt{nano <file>}'' opens that file
+	\item[]
+	\item<+-> ctrl+O saves the file
+	\item (O for ``write Out'')
+	\item ctrl+X exits
+	\item (X for ``eXit'')
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Logging On \& Aliases}
+\begin{itemize}
+	\item Now that you know more about nano
+	\item On you local computer run:
+	\ttfamily
+	\begin{block}{}
+		\item[] nano \~/.bash\_profile
+	\end{block}
+	\sffamily
+	\item Then copy and paste this into the file
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+		\item[] alias DSCR="ssh <netid>@dscr-slogin-01.oit.duke.edu"
+	\end{block}
+	\sffamily
+	\normalsize
+	\item And save the file (ctrl+O)
+	\item Once you close and re-open the terminal the alias will work
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Getting Around}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Getting Around}
+\begin{itemize}
+	\item You're on the cluster, now what?
+	\item Where are you?
+	\ttfamily
+	\begin{block}{}
+		\item[] pwd
+	\end{block}
+	\sffamily
+	\item[] \texttt{pwd} = print working directory 
+	\item Change into our course directory
+	\item Absolute vs. Relative location
+	\ttfamily
+	\begin{block}{}
+		\item[] cd /work/cc216/490S/
+	\end{block}
+	\sffamily
+	\normalsize
+	\item[] \texttt{cd} = change directory
+	\item Is this a relative or absolute address?
+	\item How can you tell?
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Looking Around}
+\begin{itemize}
+	\item You're in our directory, now what?
+	\item What's in here?
+	\ttfamily
+	\begin{block}{}
+		\item[] ls
+	\end{block}
+	\sffamily
+	\item[] \texttt{ls} = list
+	\item Also works with an absolute address
+	\ttfamily
+	\begin{block}{}
+		\item[] ls /work/cc216/490S/
+	\end{block}
+	\sffamily
+	\normalsize
+	\item[] \texttt{ls -l} = list with long format
+	\item -l is a ``flag''
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Flags and Help}
+\begin{itemize}
+	\item -l is a ``flag''
+	\item General grammar rules:
+	\item[] \texttt{<command> <flags> <input>}
+	\item Spaces and order matter
+	\ttfamily
+	\begin{block}{}
+		\item[] ls -l /work/cc216/490S
+	\end{block}
+	\sffamily
+	\item If you're unsure what the flags are ``-h'' or ``--help'' often works
+	\ttfamily
+	\begin{block}{}
+		\item[] ls -h
+		\item[] ls --help
+	\end{block}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{File Modification}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Changing Files}
+\begin{itemize}
+	\item How do you add a folder?
+	\ttfamily
+	\begin{block}{}
+		\item[] mkdir <name of directory>
+		\item[] mkdir /work/cc216/490S/test\_directory
+	\end{block}
+	\sffamily
+	\item[] \texttt{mkdir} = make directory
+	\item Try making a directory:
+	\ttfamily
+	\begin{block}{}
+		\item[] mkdir <your netid>
+	\end{block}
+	\sffamily
+	\normalsize
+	\item[] \texttt{ls} list to confirm it worked
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Changing Files}
+\begin{itemize}
+	\item There are a couple of options for file and folder manipulation
+	\item To create a file:
+	\ttfamily
+	\begin{block}{}
+		\item[] touch <name of file>
+	\end{block}
+	\sffamily
+	\item To copy a file:
+	\ttfamily
+	\begin{block}{}
+		\item[] cp <name of file>
+	\end{block}
+	\sffamily
+	\item To move a file:
+	\ttfamily
+	\begin{block}{}
+		\item[] mv <current name of file> <new name of file>
+	\end{block}
+	\sffamily
+	\item Try these inside of your recently created directory
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Submitting Jobs}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Running Jobs on the Cluster}
+\begin{itemize}
+	\item The main reason to use the cluster is for additional computing ability
+	\item This means either longer runs or higher computing power
+	\item To take advantage of this you have to submit a ``job''
+	\item The cluster will then place your job in a queue and run it when the time comes
+	\item The language of these jobs is bash
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Running Jobs on the Cluster}
+\begin{itemize}
+	\ttfamily
+	\scriptsize
+	\begin{block}{}
+		\item[] \#!/bin/bash
+		\item[] \#
+		\item[] \#SBATCH --job-name=L2\_L001\_bwa
+		\item[] \#SBATCH --output=/work/cc216/microcebus\_gatk/align/L2\_L001.align.out
+		\item[] \#SBATCH --error=/work/cc216/microcebus\_gatk/align/L2\_L001.align.err
+		\item[] \#
+		\item[] \#SBATCH -p yoderlab
+		\item[] \#SBATCH --mem=16G
+		\item[] \#SBATCH --nodes=1
+		\item[] 
+		\item[] cd /work/cc216/microcebus\_gatk/align/
+		\item[] bwa mem -t 4 -M  mmur3 /work/cc216/microcebus\_gatk/input\_fastq/L2/L2\_L001.r1.trimm.5.20.fastq.gz /work/cc216/microcebus\_gatk/input\_fastq/L2/L2\_L001.r2.trimm.5.20.fastq.gz > L2\_L001.sam
+		\item[] samtools view -bt ../chr\_group\_contigs/mouse\_lemur\_sex\_chr.fa L2\_L001.sam > L2\_L001.bam
+	\end{block}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Running Jobs on the Cluster}
+\begin{itemize}
+	\item A simple one to try out:
+	\ttfamily
+	\scriptsize
+	\begin{block}{}
+		\item[] \#!/bin/bash
+		\item[] \#
+		\item[] \#SBATCH --job-name=test\_script
+		\item[] \#SBATCH --output=/work/cc216/490S/<your netid>/test.out
+		\item[] \#SBATCH --error=/work/cc216/490S/<your netid>/test.err
+		\item[] \#
+		\item[] \#SBATCH --mem=2G
+		\item[] \#SBATCH --nodes=1
+		\item[] 
+		\item[] cd /work/cc216/490S/<your netid>/
+		\item[] date
+		\item[] sleep 60
+		\item[] date
+		\item[] touch script\_is\_done.finish
+	\end{block}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Making a Cluster Script}
+\begin{itemize}
+	\item<+-> What SHOULDN'T you use?
+	\item<+-> What SHOULD you use?
+	\begin{itemize}
+		\item<+-> nano on the cluster
+		\item<+-> TextWrangler/Sublime/etc locally
+	\end{itemize}
+	\item<+-> but how do you get it to the cluster?
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Secure Copy}
+\begin{itemize}
+	\item Used to copy a file down from the cluster or up to the cluster
+	\ttfamily
+	\scriptsize
+	\begin{block}{}
+		\item[] scp <name of file to copy> <file location desired>
+		\item[] scp <name of file to copy> <location and name if renaming>
+	\end{block}
+	\sffamily
+	\normalsize
+	\item To copy a file from a different computer, the location has to contain the computer name:
+	\ttfamily
+	\scriptsize
+	\begin{block}{}
+		\item[] scp -v cc216@dcc-slogin-02.oit.duke.edu:/dscrhome/cc216/490S/hsap\_hypoxia\_gene.diff 
+		\item[] ~/Documents/git\_repos/duke-bio490s/labs/20170831\_lab\_intro/
+	\end{block}
+	\normalsize
+	\sffamily
+	\item use ``slogin-02'' for file transfers
+	\item Also useful - cyberduck
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Making a Cluster Script}
+\begin{itemize}
+	\item Now, make the file on your computer or on the cluster
+	\item Then use the \texttt{cat} command to check the contents
+	\item[] \texttt{cat} = concatenate, writes the contents of a file to the screen
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Running a Cluster Script}
+\begin{itemize}
+	\item Once you have a script ready to run, (doublechecked with \texttt{cat}) we'll use \texttt{sbatch} to submit the script
+	\ttfamily
+	\begin{block}{}
+		\item[] sbatch <name of script>
+	\end{block}
+	\sffamily
+	\normalsize
+	\item Then to track the progress, use \texttt{squeue}:
+	\ttfamily
+	\begin{block}{}
+		\item[] squeue -u <your netid> 
+	\end{block}
+	\normalsize
+	\sffamily
+	\item This returns the jobs you have in the queue
+	\item What do you think happens if you run just \texttt{squeue}?
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{You Ran a Cluster Script!}
+\begin{itemize}
+	\item<+-> Ta-Da!! Now you can run a job on the cluster!
+	\item<+-> You now have the minimum knowledge to get onto the cluster and use the resource to run software that is unsuitable for your laptop
+	\item<+-> Now, there are a lot more things that the cluster and bash can do, mostly involving data manipulation
+	\item<+-> Let's delve into some of those!
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Basic Tools}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Tools}
+\begin{itemize}
+	\item Input and output from commandline
+	\begin{itemize}
+		\item Using \texttt{>} and \texttt{|}
+	\end{itemize}
+	\sffamily
+	\item \texttt{sort} - sorting
+	\item \texttt{uniq} - sort and eliminate duplicates
+	\item \texttt{cut} - split a file into columns
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Input and Output}
+\begin{itemize}
+	\item Unless otherwise noted:
+	\begin{itemize}
+		\item Input comes after the command
+		\item Output ``prints to screen''
+	\end{itemize}
+	\item Using \texttt{>} and \texttt{|} changes that
+	\item \texttt{>} takes output and (over)writes to a file
+	\ttfamily
+	\begin{block}{}
+		\item[] ls > list.txt
+	\end{block}
+	\sffamily
+	\normalsize
+	\item If you use double \texttt{>>} it appends to a file
+	\ttfamily
+	\begin{block}{}
+		\item[] ls -lt >> list.txt
+	\end{block}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Input and Output}
+\begin{itemize}
+	\item Using \texttt{|} changes input
+	\item \texttt{|} takes output and passes it to the next command
+	\ttfamily
+	\begin{block}{}
+		\item[] ls | head -n1
+	\end{block}
+	\sffamily
+	\normalsize
+	\item You can string together many \texttt{|}'s to perform complicated actions
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{sort}
+\begin{itemize}
+	\item \texttt{sort} takes input and sorts it! (simple, right?)
+	\ttfamily
+	\begin{block}{}
+		\item[] sort <name of file>
+		\item[] cat <name of file> | sort 
+	\end{block}
+	\sffamily
+	\normalsize
+	\item Common flags:
+	\begin{itemize}
+		\item -n sorts numerically
+		\item -u sorts and only presents unique hits
+		\item -r sorts reverse
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{uniq}
+\begin{itemize}
+	\item \texttt{uniq} takes input and removes adjacent duplicates! (still simple, right?)
+	\ttfamily
+	\begin{block}{}
+		\item[] uniq <name of file>
+		\item[] cat <name of file> | uniq 
+	\end{block}
+	\sffamily
+	\normalsize
+	\item Common flags:
+	\begin{itemize}
+		\item -c counts each unique line
+		\item -d reverses the meaning (prints only duplicates)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{cut}
+\begin{itemize}
+	\item \texttt{cut} takes input and divides it into ``columns''
+	\ttfamily
+	\begin{block}{}
+		\item[] cut -d<what to divide by> -f<which columns you want> <name of file>
+	\end{block}
+	\sffamily
+	\normalsize
+	\item Common flags:
+	\begin{itemize}
+		\item -d what to divide by (``,'' `` '' ``tab'')
+		\item -c take n characters (-c1-10 takes first 10 characters in each line)
+		\item -f which columns you want:
+		\begin{itemize}
+			\item -f1, first only
+			\item -f1-5 one through five
+			\item -f1,5 first and fifth only
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Advanced Tools}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Advanced Tools}
+\begin{itemize}
+	\item The following tools are more advanced and complicated
+	\item You will often see them in online forums
+	\item You don't have to be a wizard
+	\item It is good to be familiar with them
+	\scriptsize
+	\item[] (Once you are, there isn't a dataset you won't be able to manage)
+	\normalsize
+	\item \texttt{grep} - regular expression search
+	\item \texttt{sed} - search and replace patterns
+	\item \texttt{awk} - counting as well as search
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
