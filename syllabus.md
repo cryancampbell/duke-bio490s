@@ -40,15 +40,15 @@ Hours: 11am-1pm Fridays and by appointment
 |_Th - Lab_|_Sep 7_|_Intro to R_|_R Setup Assignment_|
 |Tu - Lecture|Sep 12|RNAseq|_read Wang et al_|
 |_Th - Lab_|_Sep 14_|_Intro to bin/bash language_|_R T-Test Assignment_|
-|_Tu - Lab_|_Sep 19_|_Downloading Public Data - SRA_|_Bring one possible dataset_|
+|_Tu - Lab_|_Sep 19_|_More bash and SLURM_||
 |Th - Lecture|Sep 21|Guest Lecture - Dr. Peter Larsen||
-|Tu - Lecture|Sep 26|Misc-omes: Transcriptomes/Epigenomes/etc||
-|_Th - Lab_|_Sep 28_|_Using Software - Readme.txt and Flags!_||
+|Tu - Lecture|Sep 26|Misc-omes: Transcriptomes/Epigenomes/etc|Bring three possible datasets OR Have one already|
+|_Th - Lab_|_Sep 28_|_SRA and Downloading Data_||
 |Tu - Lecture|Oct 3|Experimental Methods - Setting up RNAseq||
-|_Th - Lab_|_Oct 5_|_Intro to git_|_HW:R and git_|
-|Tu - Lecture|Oct 10|Statistical Methods - Analyzing RNAseq||
+|_Th - Lab_|_Oct 5_|_Using Software - Readme.txt and Flags!_|_HW:R and git_|
+|Tu - No Class|Oct 10|Fall Break -- No Class||
 |_Th - Lab_|_Oct 12_|_RNAseq Methods_|_Project Proposal (Methods)_|
-|Tu - No Class|Oct 17|Fall Break -- No Class||
+|Tu - Lecture|Oct 17|Statistical Methods - Analyzing RNAseq||
 |Th - Lecture|Oct 19|Data Visualization Module - Confirmed!||
 |_Tu - Lab_|_Oct 24_|_Data Visualization Module - Confirmed!_||
 |Th - Lecture|Oct 26|Statistical Methods (pt I) - BLAST, BUSCO, measures of similarity||
@@ -74,7 +74,7 @@ Admixture/PopGen from Genomes
 Genomic "Islands" of Speciation
 New Directions in Genomics: Introns & Alternative Splicing
 ####_Lab_
-_Submitting to the Cluster_
+_Intro to git_
 _Writing a Script, Loops/Boolean_
 _Regular Expressions - grep_
 
