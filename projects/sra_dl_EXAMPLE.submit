@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#
+#SBATCH --job-name=37509_61
+#SBATCH --output=/netscratch/cc216/female_Mmur/37509_61.out
+#SBATCH --error=/netscratch/cc216/female_Mmur/37509_61.err
+#
+#
+#SBATCH --time=240:00:00
+#SBATCH --mem=16G
+#SBATCH --nodes=1
+#
+#SBATCH --mail-user=cc216@duke.edu
+#SBATCH --mail-type=ALL
+
+cd /netscratch/cc216/female_Mmur/
+
+/home/biodept/cc216/software/sratoolkit.2.3.4-2-centos_linux64/bin/fastq-dump -Z SRR1537461 > SRR1537461_female_37509.fastq
