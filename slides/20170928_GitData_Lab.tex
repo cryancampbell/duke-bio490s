@@ -77,13 +77,13 @@ Duke University \\ % Your institution for the title page
 \begin{itemize}
 	\item<+-> Set up a group git
 	\begin{itemize}
-		\item<+-> branch
-		\item<+-> push and pull
-		\item<+-> access files in cluster folder 
+		\item<+-> Fetch and Commit
+		\item<+-> Push and Pull
+		\item<+-> Access files in cluster folder 
 	\end{itemize}
 	\item<+-> Download project data
 	\begin{itemize}
-		\item<+-> wget, curl, sratoolkit
+		\item<+-> \texttt{wget, curl, sratoolkit}
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -92,15 +92,107 @@ Duke University \\ % Your institution for the title page
 \section{Gitting}
 %------------------------------------------------
 
+%------------------------------------------------
+\begin{frame}
+\frametitle{GitHub}
+\begin{itemize}
+	\item<+-> GitHub is a version control and file sharing service
+	\item<+-> Works on your laptops as well as the cluster (via terminal)
+	\item<+-> We're going to use GitHub for the projects so that:
+	\begin{itemize}
+		\item<+-> You can all access and edit the same files
+		\item<+-> Those files can be transferred easily to the cluster
+		\item<+-> You aren't submitting redundant commands
+	\end{itemize}
+\end{itemize}
+\end{frame}
 
+%------------------------------------------------
+\begin{frame}
+\frametitle{GitHub}
+\begin{itemize}
+	\item<+-> GitHub is a version control and file sharing service
+	\item<+-> Works on your laptops as well as the cluster (via terminal)
+	\item<+-> We're going to use GitHub for the projects so that:
+	\begin{itemize}
+		\item<+-> You can all access and edit the same files
+		\item<+-> Those files can be transferred easily to the cluster
+		\item<+-> You aren't submitting redundant commands
+	\end{itemize}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
-\subsection{Branching}
+\begin{frame}
+\frametitle{GitHub}
+\begin{itemize}
+	\item<+-> This will all take place in the course Git repo
+	\item<+-> You'll need to clone it to your computer
+	\item<+-> Then give me your git username so I can make you a collaborator
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{GitHub}
+\begin{itemize}
+	\item<+-> Go to the GitHub site and copy the ``clone URL''
+	\item<+-> https://github.com/cryancampbell/duke-bio490s.git
+	\item<+-> Using one of SourceTree/github/terminal clone the repo to your computer
+	\item<+-> \texttt{git clone https://github.com/cryancampbell/duke-bio490s.git}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Fetch, Commit, Push \& Pull}
 %------------------------------------------------
 
 %------------------------------------------------
-\subsection{Commit, Push \& Pull}
+\begin{frame}
+\frametitle{Fetch, Commit, Push \& Pull}
+\begin{itemize}
+	\item<+-> Fetch, Commit, Push \& Pull
+	\begin{itemize}
+		\item<+-> The four main commands to send data back and forth to git
+	\end{itemize}
+	\item<+-> Again, they can be used in the terminal:
+	\item<+-> e.g. - \texttt{git fetch}
+	\item<+-> Or the buttons on the SourceTree or github
+\end{itemize}
+\end{frame}
+
 %------------------------------------------------
+\begin{frame}
+\frametitle{Fetch, Commit, Push \& Pull}
+\begin{itemize}
+	\item<+-> Fetch - checks with the repo to see what changes you've missed
+	\item<+-> Pull - changes your local machine to reflect those changes
+	\item<+-> Commit - prepares local changes to be pushed to the repo
+	\item<+-> Push - changes the repo to reflect the changes you've committed
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Fetch, Commit, Push \& Pull}
+\begin{itemize}
+	\item<+-> Fetch - checks with the repo to see what changes you've missed
+	\item<+-> Pull - changes your local machine to reflect those changes (aka ``merge'')
+	\item<+-> Commit - prepares local changes to be pushed to the repo (it isn't tracking every change you make)
+	\item<+-> Push - changes the repo to reflect the changes you've committed
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{GitHub}
+\begin{itemize}
+	\item<+-> This folder is for SCRIPTS not raw data
+	\item<+-> (Otherwise we'd all need GB of laptop space)
+	\item<+-> So remember to send downloaded data \underline{to your own folder on the cluster}
+	\item<+-> e.g. - \texttt{/work/cc216/490S/<your folder>} 
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \section{Data}
@@ -151,9 +243,11 @@ Duke University \\ % Your institution for the title page
 	\item Useful for sftp servers
 	\item An example:
 	\ttfamily
+	\footnotesize
 	\begin{block}{}
-		\item[] curl -o theESPNpage.html http://www.espn.com/
+		\item[] curl -o ESPNfrontpage.html http://www.espn.com/
 	\end{block}
+	\item \textsf{saved as} ESPNfrontpage.html
 \end{itemize}
 \end{frame}
 
@@ -278,17 +372,31 @@ Duke University \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Group Work}
 \begin{itemize}
-	\item<+-> You should have everything you need now to download your own data
-	\item<+-> TIPS:
-	\begin{itemize}
-		\item<+-> Run the line of code in the terminal first so you can troubleshoot it
-		\item<+-> Instead of downloading the whole file use \texttt{head} to check output  
-		\item<+-> Once you're happy THEN submit to the cluster
-		\item<+-> This will save a lot of headaches and waiting 
-	\end{itemize}
+	\item[] Group steps
+	\begin{enumerate}
+		\item Pick a group ID/Name
+		\item Make a group folder with that name within:
+		\item \texttt{duke-bio490s/projects/<group name here>}
+	\end{enumerate}
+	\item This is where you'll keep scripts to download, trim, etc data
 \end{itemize}
 \end{frame}
 
+%------------------------------------------------
+\begin{frame}
+\frametitle{Group Work}
+\begin{itemize}
+	\item<+-> You should have everything you need now to download your own data
+	\item<+-> TIPS:
+	\begin{itemize}
+		\item<+-> Run the line of code in the terminal \underline{FIRST} so you can troubleshoot it
+		\item<+-> Instead of downloading the whole file use \texttt{head} to check output  
+		\item<+-> Once your output looks correct \underline{THEN} submit to the cluster
+		\item<+-> This will save a lot of headaches and waiting
+		\item<+-> And most importantly: \underline{DON'T write data to the git repo}
+	\end{itemize}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \begin{frame}
