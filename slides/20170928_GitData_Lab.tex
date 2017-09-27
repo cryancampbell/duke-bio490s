@@ -77,13 +77,13 @@ Duke University \\ % Your institution for the title page
 \begin{itemize}
 	\item<+-> Set up a group git
 	\begin{itemize}
-		\item<+-> branch
-		\item<+-> push and pull
-		\item<+-> access files in cluster folder 
+		\item<+-> Fetch and Commit
+		\item<+-> Push and Pull
+		\item<+-> Access files in cluster folder 
 	\end{itemize}
 	\item<+-> Download project data
 	\begin{itemize}
-		\item<+-> wget, curl, sratoolkit
+		\item<+-> \texttt{wget, curl, sratoolkit}
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -126,7 +126,7 @@ Duke University \\ % Your institution for the title page
 \begin{frame}
 \frametitle{GitHub}
 \begin{itemize}
-	\item<+-> In practice this will all take place in the course Git site
+	\item<+-> This will all take place in the course Git repo
 	\item<+-> You'll need to clone it to your computer
 	\item<+-> Then give me your git username so I can make you a collaborator
 \end{itemize}
@@ -151,10 +151,13 @@ Duke University \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Fetch, Commit, Push \& Pull}
 \begin{itemize}
-	\item<+-> These are the four main commands to send data back and forth to git
+	\item<+-> Fetch, Commit, Push \& Pull
+	\begin{itemize}
+		\item<+-> The four main commands to send data back and forth to git
+	\end{itemize}
 	\item<+-> Again, they can be used in the terminal:
-	\item<+-> \texttt{git fetch}
-	\item<+-> Or with the buttons on the SourceTree or github GUI
+	\item<+-> e.g. - \texttt{git fetch}
+	\item<+-> Or the buttons on the SourceTree or github
 \end{itemize}
 \end{frame}
 
@@ -184,9 +187,10 @@ Duke University \\ % Your institution for the title page
 \begin{frame}
 \frametitle{GitHub}
 \begin{itemize}
-	\item<+-> This folder is for SCRIPTS not data
-	\item<+-> Otherwise we'd all need GB of space locally
-	\item<+-> So remember to send downloaded data to your own folder on the cluster
+	\item<+-> This folder is for SCRIPTS not raw data
+	\item<+-> (Otherwise we'd all need GB of laptop space)
+	\item<+-> So remember to send downloaded data \underline{to your own folder on the cluster}
+	\item<+-> e.g. - \texttt{/work/cc216/490S/<your folder>} 
 \end{itemize}
 \end{frame}
 
@@ -239,9 +243,11 @@ Duke University \\ % Your institution for the title page
 	\item Useful for sftp servers
 	\item An example:
 	\ttfamily
+	\footnotesize
 	\begin{block}{}
-		\item[] curl -o theESPNpage.html http://www.espn.com/
+		\item[] curl -o ESPNfrontpage.html http://www.espn.com/
 	\end{block}
+	\item \textsf{saved as} ESPNfrontpage.html
 \end{itemize}
 \end{frame}
 
@@ -361,6 +367,20 @@ Duke University \\ % Your institution for the title page
 %%	\end{block}
 %%\end{itemize}
 %%\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Group Work}
+\begin{itemize}
+	\item[] Group steps
+	\begin{enumerate}
+		\item Pick a group ID/Name
+		\item Make a group folder with that name within:
+		\item \texttt{duke-bio490s/projects/<group name here>}
+	\end{enumerate}
+	\item This is where you'll keep scripts to download, trim, etc data
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \begin{frame}
