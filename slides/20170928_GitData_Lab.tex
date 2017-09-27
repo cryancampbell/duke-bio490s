@@ -1,0 +1,300 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[14pt]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class slide themes
+\usetheme{Madrid} %i was using this one
+
+% Beamer class color themes
+
+%\usecolortheme{albatross}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{hyperref}
+\usepackage{helvet}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Git and SRA]{Sharing Scripts \& Data} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{C. Ryan Campbell} % Your name
+\institute[Duke] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Duke University \\ % Your institution for the title page
+\medskip
+\textit{c.ryan.campbell@duke.edu} % Your email address
+}
+\date{28 Sept 2017} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Goals} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Today's Goals}
+\begin{itemize}
+	\item<+-> Set up a group git
+	\begin{itemize}
+		\item<+-> branch
+		\item<+-> push and pull
+		\item<+-> access files in cluster folder 
+	\end{itemize}
+	\item<+-> Download project data
+	\begin{itemize}
+		\item<+-> wget, curl, sratoolkit
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Gitting}
+%------------------------------------------------
+
+
+
+%------------------------------------------------
+\subsection{Branching}
+%------------------------------------------------
+
+%------------------------------------------------
+\subsection{Commit, Push \& Pull}
+%------------------------------------------------
+
+%------------------------------------------------
+\section{Data}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data}
+\begin{itemize}
+	\item<+-> Many journals and grants require data to be public
+	\item<+-> PLOS, NSF, NIH
+	\item<+-> The information for where data can be found is often in:
+	\begin{itemize}
+		\item<+-> The ``Methods'' section of a paper
+		\item<+-> An appendix
+		\item<+-> The author's lab website
+	\end{itemize}
+	\item<+-> We'll talk about how to get data from each of these places 
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Commandline Tools}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Downloand Commands}
+\begin{itemize}
+	\item<+-> \texttt{curl} 
+	\item<+-> \texttt{wget}
+	\item<+-> \texttt{fastq-dump} - subset of the SRA Toolkit
+	\item<+-> Each is useful in different situations
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{curl}
+\begin{itemize}
+	\item Downloads a given url site
+	\ttfamily
+	\begin{block}{}
+		\item[] Usage: curl [options...] <url>
+	\end{block}
+	\sffamily
+	\item Options include username \& password
+	\item Useful for sftp servers
+	\item An example:
+	\ttfamily
+	\begin{block}{}
+		\item[] curl -o theESPNpage.html http://www.espn.com/
+	\end{block}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{wget}
+\begin{itemize}
+	\item Downloads a given url site
+	\ttfamily
+	\begin{block}{}
+		\item[] Usage: wget [OPTION]... [URL]...
+	\end{block}
+	\sffamily
+	\item Same options as curl
+	\item An example:
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+		\item[] wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+	\end{block}
+	\normalsize
+	\sffamily
+	\item Often used for downloading software (you'll see later...)
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{SRA}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Sequence Read Archive}
+\begin{itemize}
+	\item<+-> Holds raw sequence data from published articles
+	\item<+-> Sorted by Experiment and Project
+	\item<+-> Use SRA Toolkit to access the files
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Sequence Read Archive}
+\begin{itemize}
+	\item<+-> Often directly reference in papers
+	\item<+-> e.g. ``data are available in SRR\#\#\#\#\#\#\#\#''
+	\item<+-> Sometimes they are well organized, sometimes not
+	\item<+-> You should be able to follow the paper's methodology to separate the data into samples (if it wasn't kept that way on SRA)
+\end{itemize}
+\end{frame}
+
+%%%%UNCOMMMENT
+%------------------------------------------------
+\begin{frame}
+\frametitle{SRA Toolkit}
+\begin{itemize}
+	\item<+-> So, how do we download the data?
+	%%\item<+-> Google "SRA Toolkit" or click download link on main page
+	%%\item<+-> Which version do we want?
+	%%\item<+-> Duke's cluster is CentOS Linux 64 bit
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{SRA Toolkit}
+\begin{itemize}
+	\item<+-> How do we get the software onto the cluster?
+	%%\item<+-> \texttt{wget}
+	%%\item<+-> What is the full command?
+	%%\item<+-> \texttt{wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2-1/sratoolkit.2.8.2-1-centos_linux64.tar.gz}
+	%%\item<+-> Where should we put it? 
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{SRA Toolkit}
+\begin{itemize}
+	\item<+-> How do we use this file?
+	%%\item<+-> google ".tar.gz" extension
+	%%\item<+-> What is a tar file?
+	%%\item<+-> A group of files and folders packaged together
+	%%\item<+-> What is the command? 
+	%%\item<+-> \texttt{tar xfvz sratoolkit.current-centos_linux64.tar.gz}
+	%%\item<+-> Now what?
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{SRA Toolkit}
+\begin{itemize}
+	\item How do we use the toolkit?
+	%%\item[] Sometimes the README is helpful 
+	\item What is the toolkit (file, command, etc)?
+	%%\item Run it and see what happens!
+	\ttfamily
+	\footnotesize
+	%%\begin{block}{}
+	%%\item[] /<your path>/sratoolkit.2.8.2-1-centos\_linux64/bin/fastq-dump
+	%%\item[] /<your path>/sratoolkit.2.8.2-1-centos\_linux64/bin/fastq-dump --help
+	%%\end{block}
+\end{itemize}
+\end{frame}
+
+%%%%UNCOMMENT
+%------------------------------------------------
+%%\begin{frame}
+%%\frametitle{SRA Toolkit}
+%%\begin{itemize}
+%%	\item I've placed an example file on the cluster:
+%%	\ttfamily
+%%	\footnotesize
+%%	\begin{block}{}
+%%	\item[] cat /work/cc216/490S/duke-bio490s/projects/sra\_dl\_EXAMPLE.submit
+%%	\end{block}
+%%\end{itemize}
+%%\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Group Work}
+\begin{itemize}
+	\item<+-> You should have everything you need now to download your own data
+	\item<+-> TIPS:
+	\begin{itemize}
+		\item<+-> Run the line of code in the terminal first so you can troubleshoot it
+		\item<+-> Instead of downloading the whole file use \texttt{head} to check output  
+		\item<+-> Once you're happy THEN submit to the cluster
+		\item<+-> This will save a lot of headaches and waiting 
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
