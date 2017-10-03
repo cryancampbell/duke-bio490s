@@ -44,13 +44,13 @@ Hours: 11am-1pm Fridays and by appointment
 |Th - Lecture|Sep 21|Guest Lecture - Dr. Peter Larsen||
 |Tu - Lecture|Sep 26|Misc-omes: Transcriptomes/Epigenomes/etc|Bring three possible datasets OR Have one already|
 |_Th - Lab_|_Sep 28_|_SRA and Downloading Data_||
-|Tu - Lecture|Oct 3|Experimental Methods - Setting up RNAseq||
-|_Th - Lab_|_Oct 5_|_Using Software - Readme.txt and Flags!_|_HW:R and git_|
+|Tu - Lecture|Oct 3|Experimental Methods - RNAseq Jigsaw||
+|_Th - Lab_|_Oct 5_|_Writing a Script, Loops/Boolean_|_Download Data_|
 |Tu - No Class|Oct 10|Fall Break -- No Class||
 |_Th - Lab_|_Oct 12_|_RNAseq Methods_|_Project Proposal (Methods)_|
-|Tu - Lecture|Oct 17|Statistical Methods - Analyzing RNAseq||
-|Th - Lecture|Oct 19|Data Visualization Module - Confirmed!||
-|_Tu - Lab_|_Oct 24_|_Data Visualization Module - Confirmed!_||
+|Tu - Lecture|Oct 17|Data Visualization Module - Confirmed!||
+|_Th - Lab_|Oct 19|_Data Visualization Module - Confirmed!_||
+|Tu - Lecture|Oct 24|Genomic Methods (Long v. Short Reads)||
 |Th - Lecture|Oct 26|Statistical Methods (pt I) - BLAST, BUSCO, measures of similarity||
 |_Tu - Lab_|_Oct 31_|_Stat Methods pt 1_|Data Viz HW Due|
 |Th - Lecture|Nov 2|Statistical Methods (pt II) - Permutation Tests, experimental stats||
@@ -75,8 +75,8 @@ Genomic "Islands" of Speciation
 New Directions in Genomics: Introns & Alternative Splicing
 ####_Lab_
 _Intro to git_
-_Writing a Script, Loops/Boolean_
 _Regular Expressions - grep_
+_Using Software - Readme.txt and Flags!_
 
 
 ## Diversity
