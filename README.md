@@ -9,6 +9,12 @@ http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob
 -------------------------------------------------
 ----Important Messages and Links Will Go Here----
 -------------------------------------------------
+
+Oct 04
+Lecture will be shorter tomorrow due to the Inauguration of President Price. We'll cover loops and conditional statements in bash and the remainder of class will be group time to download your SRA data.
+-> As a reminder your proposals are due Oct 12 by 3pm <-
+
+
 Sept 05
 Dotstorming -> "What is Genomics"?
 https://dotstorming.com/b/59ae934397b729fa05814972
