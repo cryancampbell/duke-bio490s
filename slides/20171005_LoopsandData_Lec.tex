@@ -1,0 +1,429 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[14pt,handout]{beamer}
+%%\documentclass[14pt]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class slide themes
+\usetheme{Madrid} %i was using this one
+
+% Beamer class color themes
+
+%\usecolortheme{albatross}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{hyperref}
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Loops]{Loops and Conditionals} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{C. Ryan Campbell} % Your name
+\institute[Duke] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Duke University \\ % Your institution for the title page
+\medskip
+\textit{c.ryan.campbell@duke.edu} % Your email address
+}
+\date{05 Oct 2017} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Goals} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Today's Goals}
+\begin{itemize}
+	\item<+-> Fix group git permissions
+	\item<+-> Learn loops
+	\item<+-> Download multiple datafiles
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Cluster git repo}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Cluster repo}
+\begin{itemize}
+	\item<+-> git repo is on the cluster
+	\item<+-> There are some permissions issues
+	\item<+-> Whenever anyone adds a file, the default is that no one else can edit it
+	\item<+-> Problem - updating the git repo fails!
+	\item<+-> Solution - \texttt{chmod}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Permissions}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Permissions}
+\begin{itemize}
+	\normalsize
+	\item What are permissions?
+	\item The users who are given the ability to edit your files
+	\item When I run \texttt{ls -l}
+	\footnotesize
+	\item \texttt{drwxr-xr-x.  2 cc216 root   58 Sep 28 15:43 software}
+	\item \texttt{drwxrwxrwx. 21 cc216 root  561 Sep 29 11:49 490S}
+	\normalsize
+	\item The 9 letters show:
+	%%\item<2-> Read/Write/Execute permissions for User/Group/World
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Permissions}
+\begin{itemize}
+	\item To edit the permissions you use \texttt{chmod}:
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+	\item[] chmod -R 777 /work/cc216/490s/duke-bio490s
+	\end{block}
+	\normalsize
+	\sffamily
+	\item What does this do?
+	\item If you're not sure how would you find out?
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Cron Jobs}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Cron Jobs}
+\begin{itemize}
+	\item It would be hard (and annoying) to rememember to run that command as often as you create files
+	\item So we'll set up a ``cron job''
+	\item This is a command that the computer (slogin) will run repeatedly at a set time
+	\footnotesize
+	\item To do so run:
+	\ttfamily
+	\begin{block}{}
+	\item[] export VISUAL=nano; crontab -e
+	\end{block}
+	\sffamily
+	\item This should open a blank file with nano	
+	\item Inside add the following text (paying attention to spaces):
+	\ttfamily
+	\begin{block}{}
+	\item[] 01 * * * * chmod -R 777 /work/cc216/490S/duke-bio490s > /work/cc216/490S/<your netid>/cron.out 2>\&1
+	\end{block}
+	\sffamily
+	\item Finally save (ctrl + O) and exit (ctrl + X)
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Variables}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Variables}
+\begin{itemize}
+	\item Variables store data
+	\item No data types
+	\item Can be a number, character, or string of characters
+	\item Keep names simple, letters only
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+		\item[] STR=\textquotedbl Hello World\textquotedbl
+		\item[] echo \$STR
+	\end{block}
+	\sffamily
+	\item[] Use the \$ to call a variable
+	\item[] So the computer reads this as: \texttt{echo Hello World}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Loops}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Loops}
+\begin{itemize}
+	\item<+-> Variables are integral to loops
+	\item<+-> A loop performs a process interatively as a variable changes
+	\item<+-> \texttt{for} - \underline{for} all the items in a list, execute the script
+	\item<+-> \texttt{while} - \underline{while} a condition is met, execute the script
+	\item<+-> \texttt{until} - \underline{until} a condition is met, execute the script
+	\item<+-> while and until are opposites
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{for}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{for Loop}
+\begin{itemize}
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+        \item[] for i in \$( ls ); do
+        \item[]    echo item: \$i
+        \item[] done
+	\end{block}	
+	\begin{block}{}
+        \item[] for i in \$( ls ); do echo item: \$i; done
+	\end{block}
+	\item[] OR
+	\begin{block}{}
+        \item[] for i in `seq 1 10'; 
+        \item[] do
+        \item[]    echo \$i
+        \item[] done
+	\end{block}	
+	\begin{block}{}
+        \item[] for i in `seq 1 10'; do echo \$i; done
+	\end{block}
+	\sffamily
+	\item[] (note that this example isn't a \textquotesingle, it is an angled quote which shares the tilde key)
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{while/until}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{while Loop}
+\begin{itemize}
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+        \item[] COUNTER=0
+        \item[] while [  \$COUNTER -lt 10 ]; do
+        \item[]     echo The counter is \$COUNTER
+        \item[]     let COUNTER=COUNTER+1 
+        \item[] done
+	\end{block}	
+	\begin{block}{}
+        \item[] COUNTER=0; while [  \$COUNTER -lt 10 ]; do echo The counter is \$COUNTER; let COUNTER=COUNTER+1; done
+	\end{block}
+	\sffamily
+	\item[] ``let'' allows us to do math with variables, as does \$(( a + b ))
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{until Loop}
+\begin{itemize}
+	\item How would we write an ``until'' loop that does the same thing?
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+        \item[] COUNTER=0
+        \item[] while [  \$COUNTER -lt 10 ]; do
+        \item[]     echo The counter is \$COUNTER
+        \item[]     let COUNTER=COUNTER+1 
+        \item[] done
+	\end{block}	
+	\sffamily
+	\tiny
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+%%\begin{frame}
+%%\frametitle{until Loop}
+%%\begin{itemize}
+%%	\item ``until'' loop that has the same output:
+%%	\footnotesize
+%%	\ttfamily
+%%	\begin{block}{}
+%%        \item[] COUNTER=0
+%%        \item[] until [  \$COUNTER -gt 9 ]; do
+%%        \item[]     echo The counter is \$COUNTER
+%%        \item[]     let COUNTER=COUNTER+1 
+%%        \item[] done
+%%	\end{block}	
+%%	\begin{block}{}
+%%        \item[] COUNTER=0; until [  \$COUNTER -gt 9 ]; do echo The counter is \$COUNTER; let COUNTER=COUNTER+1; done
+%%	\end{block}
+%%	\sffamily
+%%	\tiny
+%%\end{itemize}
+%%\end{frame}
+
+%------------------------------------------------
+\section{Conditionals}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Conditionals}
+\begin{itemize}
+	\item<+-> Logical parameters
+	\item<+-> Are powerful when automating processes
+	\item<+-> \texttt{if} - \underline{if} a condition is met (evaluates T/F)
+	\item<+-> \texttt{then} - \underline{then} execute the script
+	\item<+-> \texttt{else} - \underline{until} if the condition is not met, execute this script
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\subsection{if}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{while Loop}
+\begin{itemize}
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+        \item[] if [ \textquotedbl\$(ls | wc -l)\textquotedbl -gt 5 ]; then
+        \item[] 	echo youve got a lot of files in here
+        \item[] else
+        \item[]     echo do more work
+        \item[] fi
+	\end{block}	
+	\begin{block}{}
+        \item[] if [ \textquotedbl\$(ls | wc -l)\textquotedbl -gt 5 ]; then echo youve got a lot of files in here; else echo do more work; fi
+	\end{block}
+	\sffamily
+	\tiny
+	\item[] Spacing is, as always, important
+	\item[] When in doubt check your variables by echo'ing them
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\section{Data Example}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{But... How does this help?}
+\begin{itemize}
+	\item<1-> So, how does this help solve the problem of downloading data?
+	%%\begin{itemize}
+	%%	\item<5-> A loop can automate downloading many files
+	%%\end{itemize}
+	\item<2-> How can you use these tools to download a set of files?
+	%%\begin{itemize}
+	%%	\item<6-> Use a \texttt{for} loop to iterate across SRR numbers
+	%%\end{itemize}
+	\item<3-> What other ways could this make data management easier?
+	%%\item<4-> Think file naming...
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Dotstorming}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Dotstorming Question}
+\begin{itemize}
+	\small
+	\item<1-> I've been impressed with everyone's ability to digest class material, complete difficult assignments, and work together with your groups
+	\item<2-> I'd like to make sure that the course stays relevant and helpful
+	\item<3-> So with that in mind:  
+	\item<3-> What task/part of your project are you most concerned about your ability to complete?
+	\item<3-> \href{https://dotstorming.com/b/59d4d3ed03432ec1203b6c4b}{Dotstorming Board}:
+	\item<3-> \href{https://dotstorming.com/b/59d4d3ed03432ec1203b6c4b}{https://dotstorming.com/b/59d4d3ed03432ec1203b6c4b}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+%%\begin{frame}
+%%\frametitle{Batch Download Cluster Job}
+%%\begin{itemize}
+%%	\item An example of a for loop to use fastq-dump
+%%	\ttfamily
+%%	\scriptsize
+%%	\begin{block}{}
+%%		\item[] \#!/bin/bash
+%%		\item[] \#
+%%		\item[] \#SBATCH --job-name=srr\_dwnld
+%%		\item[] \#SBATCH --output=/work/cc216/490S/cc216/srr\_dwnld.out
+%%		\item[] \#SBATCH --error=/work/cc216/490S/cc216/srr\_dwnld.err
+%%		\item[] \#SBATCH --mail-user=cc216@duke.edu
+%%		\item[] \#SBATCH --mem=2G
+%%		\item[] \#SBATCH --nodes=1
+%%		\item[] 
+%%		\item[] cd /work/cc216/490S/cc216/
+%%		\item[] 
+%%		\item[] for n in `cat SRR\_Acc\_List.txt'
+%%		\item[] do
+%%		\item[]		echo \$n
+%%		\item[] 	fastq-dump -Z --split-files \$n
+%%		\item[] done
+%%	\end{block}
+%%\end{itemize}
+%%\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
