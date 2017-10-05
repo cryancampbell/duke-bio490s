@@ -117,7 +117,7 @@ Duke University \\ % Your institution for the title page
 	\item \texttt{drwxrwxrwx. 21 cc216 root  561 Sep 29 11:49 490S}
 	\normalsize
 	\item The 9 letters show:
-	%%\item<2-> Read/Write/Execute permissions for User/Group/World
+	\item<2-> Read/Write/Execute permissions for User/Group/World
 \end{itemize}
 \end{frame}
 
@@ -286,26 +286,26 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{until Loop}
-%%\begin{itemize}
-%%	\item ``until'' loop that has the same output:
-%%	\footnotesize
-%%	\ttfamily
-%%	\begin{block}{}
-%%        \item[] COUNTER=0
-%%        \item[] until [  \$COUNTER -gt 9 ]; do
-%%        \item[]     echo The counter is \$COUNTER
-%%        \item[]     let COUNTER=COUNTER+1 
-%%        \item[] done
-%%	\end{block}	
-%%	\begin{block}{}
-%%        \item[] COUNTER=0; until [  \$COUNTER -gt 9 ]; do echo The counter is \$COUNTER; let COUNTER=COUNTER+1; done
-%%	\end{block}
-%%	\sffamily
-%%	\tiny
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{until Loop}
+\begin{itemize}
+	\item ``until'' loop that has the same output:
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+        \item[] COUNTER=0
+        \item[] until [  \$COUNTER -gt 9 ]; do
+        \item[]     echo The counter is \$COUNTER
+        \item[]     let COUNTER=COUNTER+1 
+        \item[] done
+	\end{block}	
+	\begin{block}{}
+        \item[] COUNTER=0; until [  \$COUNTER -gt 9 ]; do echo The counter is \$COUNTER; let COUNTER=COUNTER+1; done
+	\end{block}
+	\sffamily
+	\tiny
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \section{Conditionals}
@@ -360,15 +360,15 @@ Duke University \\ % Your institution for the title page
 \frametitle{But... How does this help?}
 \begin{itemize}
 	\item<1-> So, how does this help solve the problem of downloading data?
-	%%\begin{itemize}
-	%%	\item<5-> A loop can automate downloading many files
-	%%\end{itemize}
+	\begin{itemize}
+		\item<5-> A loop can automate downloading many files
+	\end{itemize}
 	\item<2-> How can you use these tools to download a set of files?
-	%%\begin{itemize}
-	%%	\item<6-> Use a \texttt{for} loop to iterate across SRR numbers
-	%%\end{itemize}
+	\begin{itemize}
+		\item<6-> Use a \texttt{for} loop to iterate across SRR numbers
+	\end{itemize}
 	\item<3-> What other ways could this make data management easier?
-	%%\item<4-> Think file naming...
+	\item<4-> Think file naming...
 \end{itemize}
 \end{frame}
 
@@ -391,32 +391,32 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{Batch Download Cluster Job}
-%%\begin{itemize}
-%%	\item An example of a for loop to use fastq-dump
-%%	\ttfamily
-%%	\scriptsize
-%%	\begin{block}{}
-%%		\item[] \#!/bin/bash
-%%		\item[] \#
-%%		\item[] \#SBATCH --job-name=srr\_dwnld
-%%		\item[] \#SBATCH --output=/work/cc216/490S/cc216/srr\_dwnld.out
-%%		\item[] \#SBATCH --error=/work/cc216/490S/cc216/srr\_dwnld.err
-%%		\item[] \#SBATCH --mail-user=cc216@duke.edu
-%%		\item[] \#SBATCH --mem=2G
-%%		\item[] \#SBATCH --nodes=1
-%%		\item[] 
-%%		\item[] cd /work/cc216/490S/cc216/
-%%		\item[] 
-%%		\item[] for n in `cat SRR\_Acc\_List.txt'
-%%		\item[] do
-%%		\item[]		echo \$n
-%%		\item[] 	fastq-dump -Z --split-files \$n
-%%		\item[] done
-%%	\end{block}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{Batch Download Cluster Job}
+\begin{itemize}
+	\item An example of a for loop to use fastq-dump
+	\ttfamily
+	\scriptsize
+	\begin{block}{}
+		\item[] \#!/bin/bash
+		\item[] \#
+		\item[] \#SBATCH --job-name=srr\_dwnld
+		\item[] \#SBATCH --output=/work/cc216/490S/cc216/srr\_dwnld.out
+		\item[] \#SBATCH --error=/work/cc216/490S/cc216/srr\_dwnld.err
+		\item[] \#SBATCH --mail-user=cc216@duke.edu
+		\item[] \#SBATCH --mem=2G
+		\item[] \#SBATCH --nodes=1
+		\item[] 
+		\item[] cd /work/cc216/490S/cc216/
+		\item[] 
+		\item[] for n in `cat SRR\_Acc\_List.txt'
+		\item[] do
+		\item[]		echo \$n
+		\item[] 	fastq-dump -Z --split-files \$n
+		\item[] done
+	\end{block}
+\end{itemize}
+\end{frame}
 
 
 %------------------------------------------------
