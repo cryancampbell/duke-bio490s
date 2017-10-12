@@ -1,0 +1,172 @@
+SINGLE	SRR023824	L2 stage larvae
+SINGLE	SRR023761	L2 stage larvae
+SINGLE	SRR023719	L2 stage larvae
+SINGLE	SRR023670	L2 stage larvae
+PAIRED	SRR023542	L2 stage larvae
+PAIRED	SRR023507	L3 stage larvae, 12 hr post-molt
+SINGLE	SRR023649	L3 stage larvae, 12 hr post-molt
+SINGLE	SRR023731	L3 stage larvae, 12 hr post-molt
+SINGLE	SRR023677	L3 stage larvae, 12 hr post-molt
+SINGLE	SRR023760	L3 stage larvae, 12 hr post-molt
+SINGLE	SRR023758	L3 stage larvae, dark blue gut PS(1-2)
+SINGLE	SRR023697	L3 stage larvae, dark blue gut PS(1-2)
+SINGLE	SRR023726	L3 stage larvae, dark blue gut PS(1-2)
+SINGLE	SRR023640	L3 stage larvae, dark blue gut PS(1-2)
+PAIRED	SRR023546	L3 stage larvae, dark blue gut PS(1-2)
+PAIRED	SRR023608	L3 stage larvae, dark blue gut PS(1-2)
+SINGLE	SRR023638	L3 stage larvae, dark blue gut PS(1-2)
+PAIRED	SRR023505	L3 stage larvae, light blue gut PS(3-6)
+SINGLE	SRR023742	L3 stage larvae, light blue gut PS(3-6)
+SINGLE	SRR023683	L3 stage larvae, light blue gut PS(3-6)
+SINGLE	SRR023692	L3 stage larvae, light blue gut PS(3-6)
+SINGLE	SRR023676	L3 stage larvae, light blue gut PS(3-6)
+SINGLE	SRR023690	L3 stage larvae, light blue gut PS(3-6)
+SINGLE	SRR023828	adult female, 1 day after eclosion
+SINGLE	SRR023680	adult female, 1 day after eclosion
+SINGLE	SRR023702	adult female, 1 day after eclosion
+SINGLE	SRR023737	adult female, 1 day after eclosion
+PAIRED	SRR023595	adult female, 1 day after eclosion
+SINGLE	SRR023662	adult female, 1 day after eclosion
+SINGLE	SRR023674	adult female, 30 days after eclosion
+PAIRED	SRR023598	adult female, 30 days after eclosion
+PAIRED	SRR023548	adult female, 30 days after eclosion
+SINGLE	SRR023712	adult female, 30 days after eclosion
+SINGLE	SRR023681	adult female, 30 days after eclosion
+SINGLE	SRR023757	adult female, 30 days after eclosion
+SINGLE	SRR023717	adult female, 5 days after eclosion
+SINGLE	SRR023730	adult female, 5 days after eclosion
+PAIRED	SRR023547	adult female, 5 days after eclosion
+PAIRED	SRR023607	adult female, 5 days after eclosion
+SINGLE	SRR023645	adult female, 5 days after eclosion
+SINGLE	SRR023651	adult female, 5 days after eclosion
+SINGLE	SRR023648	adult male, 1 day after eclosion
+SINGLE	SRR023664	adult male, 1 day after eclosion
+PAIRED	SRR023543	adult male, 1 day after eclosion
+SINGLE	SRR023741	adult male, 1 day after eclosion
+SINGLE	SRR023678	adult male, 1 day after eclosion
+SINGLE	SRR023825	adult male, 1 day after eclosion
+SINGLE	SRR023679	adult male, 5 days after eclosion
+SINGLE	SRR023713	adult male, 5 days after eclosion
+PAIRED	SRR023550	adult male, 5 days after eclosion
+PAIRED	SRR023605	adult male, 5 days after eclosion
+PAIRED	SRR023606	adult male, 5 days after eclosion
+SINGLE	SRR023672	adult male, 5 days after eclosion
+SINGLE	SRR023658	adult male, 5 days after eclosion
+SINGLE	SRR023642	adult male, 5 days after eclosion
+SINGLE	SRR023650	adult male, 30 days after eclosion
+PAIRED	SRR023601	adult male, 30 days after eclosion
+SINGLE	SRR023714	adult male, 30 days after eclosion
+SINGLE	SRR023698	adult male, 30 days after eclosion
+SINGLE	SRR023752	adult male, 30 days after eclosion
+SINGLE	SRR023823	adult male, 30 days after eclosion
+SINGLE	SRR023833	pupae, 12 hr after WPP
+SINGLE	SRR023689	pupae, 12 hr after WPP
+SINGLE	SRR023716	pupae, 12 hr after WPP
+SINGLE	SRR023639	pupae, 12 hr after WPP
+PAIRED	SRR023544	pupae, 12 hr after WPP
+SINGLE	SRR023647	pupae, 12 hr after WPP
+SINGLE	SRR023656	pupae, 24 hrs after WPP
+PAIRED	SRR023541	pupae, 24 hrs after WPP
+SINGLE	SRR023708	pupae, 24 hrs after WPP
+SINGLE	SRR023830	pupae, 24 hrs after WPP
+SINGLE	SRR023756	pupae, 24 hrs after WPP
+SINGLE	SRR023827	pupae, 4 days after WPP
+SINGLE	SRR023723	pupae, 4 days after WPP
+SINGLE	SRR023740	pupae, 4 days after WPP
+SINGLE	SRR023735	pupae, 4 days after WPP
+PAIRED	SRR023609	pupae, 4 days after WPP
+SINGLE	SRR023653	pupae, 4 days after WPP
+SINGLE	SRR023739	L3 stage larvae, clear gut PS(7-9)
+SINGLE	SRR023729	L3 stage larvae, clear gut PS(7-9)
+SINGLE	SRR023782	L3 stage larvae, clear gut PS(7-9)
+SINGLE	SRR023865	L3 stage larvae, clear gut PS(7-9)
+SINGLE	SRR023784	WPP
+SINGLE	SRR023837	WPP
+SINGLE	SRR023687	WPP
+SINGLE	SRR023695	WPP
+SINGLE	SRR023704	WPP
+PAIRED	SRR023199	embryos, 0-2 hr
+SINGLE	SRR023659	embryos, 0-2 hr
+SINGLE	SRR023663	embryos, 0-2 hr
+SINGLE	SRR023671	embryos, 0-2 hr
+SINGLE	SRR023747	embryos, 0-2 hr
+SINGLE	SRR023755	embryos, 0-2 hr
+SINGLE	SRR023745	embryos,  2-4 hr
+SINGLE	SRR023722	embryos,  2-4 hr
+SINGLE	SRR023705	embryos,  2-4 hr
+SINGLE	SRR023660	embryos,  2-4 hr
+PAIRED	SRR023502	embryos,  2-4 hr
+PAIRED	SRR023539	embryos, 4-6 hr
+SINGLE	SRR023669	embryos, 4-6 hr
+SINGLE	SRR023696	embryos, 4-6 hr
+SINGLE	SRR023746	embryos, 4-6 hr
+SINGLE	SRR023836	embryos, 4-6 hr
+SINGLE	SRR023732	embryos, 6-8 hr
+SINGLE	SRR023688	embryos, 6-8 hr
+SINGLE	SRR023691	embryos, 6-8 hr
+SINGLE	SRR023668	embryos, 6-8 hr
+SINGLE	SRR023654	embryos, 6-8 hr
+PAIRED	SRR023504	embryos, 6-8 hr
+PAIRED	SRR023549	embryos, 8-10 hr
+PAIRED	SRR023596	embryos, 8-10 hr
+PAIRED	SRR023603	embryos, 8-10 hr
+SINGLE	SRR023657	embryos, 8-10 hr
+SINGLE	SRR023701	embryos, 8-10 hr
+SINGLE	SRR023754	embryos, 8-10 hr
+SINGLE	SRR023749	embryos, 8-10 hr
+SINGLE	SRR023750	embryos, 8-10 hr
+SINGLE	SRR023759	embryos, 8-10 hr
+SINGLE	SRR023831	embryos, 10-12 hr
+SINGLE	SRR023694	embryos, 10-12 hr
+SINGLE	SRR023727	embryos, 10-12 hr
+SINGLE	SRR023644	embryos, 10-12 hr
+PAIRED	SRR023604	embryos, 10-12 hr
+PAIRED	SRR023602	embryos, 12-14 hr
+SINGLE	SRR023643	embryos, 12-14 hr
+SINGLE	SRR023724	embryos, 12-14 hr
+SINGLE	SRR023703	embryos, 12-14 hr
+SINGLE	SRR023832	embryos, 12-14 hr
+SINGLE	SRR023822	embryos, 14-16 hr
+SINGLE	SRR023725	embryos, 14-16 hr
+SINGLE	SRR023734	embryos, 14-16 hr
+SINGLE	SRR023736	embryos, 14-16 hr
+SINGLE	SRR023641	embryos, 14-16 hr
+PAIRED	SRR023540	embryos, 14-16 hr
+PAIRED	SRR023600	embryos, 16-18 hr
+SINGLE	SRR023707	embryos, 16-18 hr
+SINGLE	SRR023715	embryos, 16-18 hr
+SINGLE	SRR023720	embryos, 16-18 hr
+SINGLE	SRR023751	embryos, 16-18 hr
+SINGLE	SRR023826	embryos, 16-18 hr
+SINGLE	SRR023699	embryos, 18-20 hr
+SINGLE	SRR023700	embryos, 18-20 hr
+SINGLE	SRR023686	embryos, 18-20 hr
+SINGLE	SRR023682	embryos, 18-20 hr
+PAIRED	SRR023599	embryos, 18-20 hr
+PAIRED	SRR023503	embryos, 18-20 hr
+SINGLE	SRR023673	embryos, 18-20 hr
+SINGLE	SRR023665	embryos, 20-22 hr
+PAIRED	SRR023506	embryos, 20-22 hr
+SINGLE	SRR023684	embryos, 20-22 hr
+SINGLE	SRR023718	embryos, 20-22 hr
+SINGLE	SRR023728	embryos, 20-22 hr
+SINGLE	SRR023834	embryos, 22-24 hr
+SINGLE	SRR023733	embryos, 22-24 hr
+SINGLE	SRR023685	embryos, 22-24 hr
+SINGLE	SRR023711	embryos, 22-24 hr
+PAIRED	SRR023538	embryos, 22-24 hr
+PAIRED	SRR023597	L1 stage larvae
+SINGLE	SRR023666	L1 stage larvae
+SINGLE	SRR023661	L1 stage larvae
+SINGLE	SRR023646	L1 stage larvae
+SINGLE	SRR023706	L1 stage larvae
+SINGLE	SRR023835	L1 stage larvae
+SINGLE	SRR023721	pupae, 2 days after WPP
+SINGLE	SRR023743	pupae, 2 days after WPP
+SINGLE	SRR023667	pupae, 2 days after WPP
+SINGLE	SRR023829	pupae, 2 days after WPP
+SINGLE	SRR023785	pupae, 2 days after WPP
+SINGLE	SRR023783	pupae, 3 days after WPP
+SINGLE	SRR023744	pupae, 3 days after WPP
+SINGLE	SRR023748	pupae, 3 days after WPP
+SINGLE	SRR023738	pupae, 3 days after WPP

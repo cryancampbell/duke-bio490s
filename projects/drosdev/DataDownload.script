@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#SBATCH --job-name=DataDownload.script
+#SBATCH --output=/work/cc216/490S/duke-bio490s/projects/drosdev/DataDownload.out
+#SBATCH --error=/work/cc216/490S/duke-bio490s/projects/drosdev/DataDownload.err
+#
+#SBATCH --mem=10G
+#SBATCH --nodes=1
+#SBATCH --mail-user=hca3@duke.edu
+
+touch script_has_started.txt
+
+cd /work/cc216/490S/drosdev/FastQData/
+for SRR in `cat SrrAccList.txt`
+do
+fastq-dump $SRR
+mv "$SRR.fastq" "`grep $SRR SraRuns4Download.txt| cut -f3| sed 's#,##g'| sed 's,\ ,-,g'`_$SRR"
+rm ~/ncbi/public/sra/*cache;
+done
+
+cd /work/cc216/490S/duke-bio490s/projects/drosdev/
+
+touch data_is_downloaded.txt

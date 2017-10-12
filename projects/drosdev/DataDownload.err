@@ -1,0 +1,2 @@
+2017-10-11T04:03:37 fastq-dump.2.8.2 err: storage exhausted while writing file within file system module - system bad file descriptor error fd='4'
+2017-10-11T04:03:37 fastq-dump.2.8.2 int: storage exhausted while writing file within file system module - switching cache-tee-file to read-only
