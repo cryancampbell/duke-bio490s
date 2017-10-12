@@ -47,17 +47,17 @@ Hours: 11am-1pm Fridays and by appointment
 |Tu - Lecture|Oct 3|Experimental Methods - RNAseq Jigsaw||
 |_Th - Lab_|_Oct 5_|_Writing a Script, Loops/Boolean_|_Download Data_|
 |Tu - No Class|Oct 10|Fall Break -- No Class||
-|_Th - Lab_|_Oct 12_|_RNAseq Methods_|_Project Proposal (Methods)_|
+|_Th - Lab_|_Oct 12_|_RNAseq Methods pt1_|_Project Proposal (Methods)_|
 |Tu - Lecture|Oct 17|Data Visualization Module - Confirmed!||
 |_Th - Lab_|Oct 19|_Data Visualization Module - Confirmed!_||
 |Tu - Lecture|Oct 24|Genomic Methods (Long v. Short Reads)||
-|Th - Lecture|Oct 26|Statistical Methods (pt I) - BLAST, BUSCO, measures of similarity||
-|_Tu - Lab_|_Oct 31_|_Stat Methods pt 1_|Data Viz HW Due|
-|Th - Lecture|Nov 2|Statistical Methods (pt II) - Permutation Tests, experimental stats||
-|_Tu - Lab_|_Nov 7_|_Stat Methods pt 2_|_Project Draft - First Pass_|
-|Th - Lecture|Nov 9|Statistal Methods (pt III) - Bayesian Stats, Simulations|HW: Statistical Methods|
-|_Th - Lab_|_Nov 14_|_Stat Methods pt 3_||
-|Th - Lecture|Nov 16|Future Genomic Tech - TenX, long reads, Oxford Nano||
+|_Th - Lab_|_Oct 26_|_RNAseq Methods pt2_|_Data Viz HW Due_|
+|_Tu - Lab_|_Oct 31_|_Graphing RNAseq Results_||
+|Th - Lecture|Nov 2|Statistical Methods (pt I) - Permutation Tests, experimental stats||
+|_Tu - Lab_|_Nov 7_|_Stat Methods pt 1_||
+|Th - Lecture|Nov 9|Statistal Methods (pt II) - Bayesian Stats, Simulations|Project Draft - First Pass|
+|_Tu - Lab_|_Nov 14_|_Stat Methods pt 2_||
+|Th - Lecture|Nov 16|Future Genomic Tech - 10X, long reads, Oxford Nano|HW: Stat Methods Due|
 |Tu - Lecture|Nov 21|What can we learn from genomes? (Pop Gen, PSMC)||
 |_Th_|_Nov 23_|_THANKSGIVING -- No Class_||
 |Tu - Lecture|Nov 28|Student Choice/Overflow Lecture||
@@ -68,11 +68,11 @@ Hours: 11am-1pm Fridays and by appointment
 
 ###Possible Topics
 ####Lecture
-Genomic Methods (Long v. Short Reads)
 Non-Model Genomics - Possibilities and Pitfalls
 Admixture/PopGen from Genomes
 Genomic "Islands" of Speciation
 New Directions in Genomics: Introns & Alternative Splicing
+Statistical Methods (pt III) - BLAST, BUSCO, measures of similarity
 ####_Lab_
 _Intro to git_
 _Regular Expressions - grep_
