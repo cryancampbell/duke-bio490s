@@ -9,6 +9,11 @@ http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob
 -------------------------------------------------
 ----Important Messages and Links Will Go Here----
 -------------------------------------------------
+Oct 31
+Rough Drafts are due SOON
+Please vote (via Dotstorming Board) on some specifics:
+https://dotstorming.com/b/59f7a2ab2ce8a88c0ceaefbe
+We'll discuss further in class Tues Oct 31
 
 Oct 04
 Lecture will be shorter tomorrow due to the Inauguration of President Price. We'll cover loops and conditional statements in bash and the remainder of class will be group time to download your SRA data.
