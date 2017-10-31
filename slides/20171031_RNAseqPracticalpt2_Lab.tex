@@ -385,11 +385,30 @@ Duke University \\ % Your institution for the title page
 	\footnotesize
 	\ttfamily
 	\begin{block}{}
-	\item[] ls -lthr /work/cc216/490S/cc216/RNAseq\_pt2
+	\item[] ls -l /work/cc216/490S/cc216/RNAseq\_pt2
 	\end{block}
 	\begin{center}
-		\includegraphics[width=.9\textwidth]{images_20171026_usefiles.png}
+		\includegraphics[width=.9\textwidth]{images_20171031_usefiles.png}
 	\end{center}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{symbolic links}
+\begin{itemize}
+	\item Some of the files in this directory are symbolic links or ``sym-links''
+	\item It looks like the file is there, but it actually just points to the true location
+	\item Essentially a shortcut, you can call the link as if it were the file
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+	\item[] ln -s <file to link to> <link to create>
+	\item[] 
+	\item[] ln -s s01/accepted\_hits.bam ./s01\_accepted\_hits.bam
+	\end{block}
+	\sffamily
+	\item[] (the -s stands for ``soft'' which allows links across directories and file systems)
 \end{itemize}
 \end{frame}
 
