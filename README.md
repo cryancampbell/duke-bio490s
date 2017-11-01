@@ -9,6 +9,15 @@ http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob
 -------------------------------------------------
 ----Important Messages and Links Will Go Here----
 -------------------------------------------------
+Nov 2
+Voting has concluded!
+Rough Drafts will be due November 16th!
+Full rubric is coming soon, but generally -
+- Convert proposal to paragraph format Intro/Methods
+- *.count files for each sample
+- 2 preliminary plots from DESeq
+- A few additional paragraphs of text in Results
+
 Oct 31
 Rough Drafts are due SOON
 Please vote (via Dotstorming Board) on some specifics:
