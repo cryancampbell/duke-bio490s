@@ -52,16 +52,16 @@ Hours: 11am-1pm Fridays and by appointment
 |_Th - Lab_|Oct 19|_Data Visualization Module - Confirmed!_||
 |Tu - Lecture|Oct 24|Genomic Methods (Long v. Short Reads)||
 |_Th - Lab_|_Oct 26_|_RNAseq Methods pt2_|_Data Viz HW Due_|
-|_Tu - Lab_|_Oct 31_|_Graphing RNAseq Results_||
-|Th - Lecture|Nov 2|Statistical Methods (pt I) - Permutation Tests, experimental stats||
-|_Tu - Lab_|_Nov 7_|_Stat Methods pt 1_||
-|Th - Lecture|Nov 9|Statistal Methods (pt II) - Bayesian Stats, Simulations|Project Draft - First Pass|
-|_Tu - Lab_|_Nov 14_|_Stat Methods pt 2_||
-|Th - Lecture|Nov 16|Future Genomic Tech - 10X, long reads, Oxford Nano|HW: Stat Methods Due|
-|Tu - Lecture|Nov 21|What can we learn from genomes? (Pop Gen, PSMC)||
+|_Tu - Lab_|_Oct 31_|_RNAseq Methods pt2.5_||
+|_Th - Lab_|_Nov 2_|_RNAseq Methods pt2.5_||
+|_Tu - Lab_|_Nov 7_|_DESeq_||
+|_Th - Lab_|_Nov 9_|_ggplot and DESeq_||
+|_Tu - Lab_|_Nov 14_|_ggplot_||
+|Th - Lecture|Nov 16|Scientific Writing|HW: Rough Draft of Project Due|
+|_Tu - Lab_|_Nov 21_|_Open Lab_||
 |_Th_|_Nov 23_|_THANKSGIVING -- No Class_||
-|Tu - Lecture|Nov 28|Student Choice/Overflow Lecture||
-|_Th - Lab_|_Nov 30_|_Student Choice/Overflow Lab_||
+|Tu - Lecture|Nov 28|Statistical Methods (pt I) - Permutation Tests, Experimental Stats||
+|Th - Lecture|Nov 30|Statistical Methods (pt II) - Bayes and Simulations||
 |Tu - Lecture|Dec 5|Project Presentations|Final Project (Present)|
 |Th - Lecture|Dec 7|Project Presentations|Final Project (Present)|
 |Exam| |Final Exam - In Class Activity/Mini-Project||
