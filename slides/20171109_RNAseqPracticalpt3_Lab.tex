@@ -53,7 +53,7 @@ Duke University \\ % Your institution for the title page
 \medskip
 \textit{c.ryan.campbell@duke.edu} % Your email address
 }
-\date{7 Nov 2017} % Date, can be changed to a custom date
+\date{9 Nov 2017} % Date, can be changed to a custom date
 
 \begin{document}
 
@@ -74,8 +74,7 @@ Duke University \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Today's Goals}
 \begin{itemize}
-	\item<+-> Check tophat2 paths
-	\item<+-> Discuss htseq-count flags
+	\item<+-> Discuss Methods and Results
 	\item<+-> Format data for DESeq
 	\item<+-> Run DESeq
 \end{itemize}
@@ -83,17 +82,81 @@ Duke University \\ % Your institution for the title page
 
 
 %------------------------------------------------
-\section{tophat2 paths}
+\section{Methods \& Results}
+%------------------------------------------------
+
+%------------------------------------------------
+\subsection{Methods}
 %------------------------------------------------
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{tophat}
+\frametitle{Methods}
 \begin{itemize}
-	\item<+-> tophat2 - alignment software
-	\item<+-> In: Sequence data
-	\item<+-> Out: .bam file - where that data aligns to/fits in the genome
+	\sffamily
+	\normalsize
+	\item<+-> Should be pretty dry reading
+	\item<+-> Read like a lab notebook or recipe
+	\item<+-> The reader should be able to replicate your work
 \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Methods}
+\begin{itemize}
+	\sffamily
+	\normalsize
+	\item<+-> If you used a software it should be in the Methods
+	\item<+-> Include details of usage (flags, settings, or if you used defaults)
+	\item<+-> Be sure to cite the software and list the version
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Methods}
+\begin{center}
+	\includegraphics[width=.5\textwidth]{images_20171109_methods.png}
+\end{center}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Results}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Results}
+\begin{itemize}
+	\sffamily
+	\normalsize
+	\item<+-> Less dry reading, still a bit boring
+	\item<+-> This is \underline{JUST} for outcomes of the work
+	\item<+-> No analysis or interpretation, only what the results were
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Results}
+\begin{itemize}
+	\sffamily
+	\normalsize
+	\item<+-> If a step was in your Methods, list the results
+	\item<+-> This is obvious sometimes:
+	\item<+-> "After running trimmomatic n\% of the data was kept"
+	\item<+-> And less so others:
+	\item<+-> DESeq2 has a lot of output, summarize what is most important
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Results}
+\begin{center}
+	\includegraphics[width=.5\textwidth]{images_20171109_results.png}
+\end{center}
 \end{frame}
 
 %------------------------------------------------
@@ -110,90 +173,6 @@ Duke University \\ % Your institution for the title page
 	\item When you're done with an interactive node type \texttt{exit}
 	\item Also, check your SLURM queue \texttt{squeue -u <netID>}
 	\item If you're still running a ``bash'' job, use \texttt{scancel <job ID number>} to cancel it
-\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-\frametitle{tophat}
-\begin{itemize}
-	\item tophat2 is the command/software that aligns the reads to the genome
-	\item It is already installed on the cluster
-	\item So put the following location in your path, or in your bash\_profile
-	\footnotesize
-	\ttfamily
-	\begin{block}{}
-	\item[] export PATH=/opt/apps/tophat-bowtie/:\$PATH
-	\item[] tophat2
-	\item[]
-	\item[] export PATH=/opt/apps/tophat/bin/samtools/bin/:\$PATH
-	\item[] samtools
-	\end{block}
-	\sffamily
-\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-\frametitle{tophat}
-\begin{itemize}
-	\item[] tophat2 example format (all one line):
-	\ttfamily
-	\footnotesize
-	\begin{block}{}
-	\item[] tophat2 -p <number of threads> -o <output dir> -G <gff file, annotations> <bowtie2 index> <R1 fastq> <R2 fastq>
-	\item[] 
-	\end{block}
-	\sffamily
-	\normalsize
-	\item Help can be found by running ``tophat2''
-	\item Or in the tophat2 manual online
-	\item \href{http://ccb.jhu.edu/software/tophat/manual.shtml}{http://ccb.jhu.edu/software/tophat/manual.shtml}
-\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\section{htseq-count}
-%------------------------------------------------
-
-%------------------------------------------------
-\begin{frame}
-\frametitle{HTSeq}
-\begin{itemize}
-	\item<+-> python-based program to count reads
-	\item<+-> Input: 
-	\item<+-> .bam file \underline{and} .gtf/.gff
-	\item<+-> Output:
-	\item<+-> A table of counts by gene
-\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-\frametitle{htseq-count}
-\begin{itemize}
-	\item We'll be using htseq-count
-	\item This will count the number of reads mapped to each gene
-	\item That data will be taken into DESeq2
-	\footnotesize
-	\ttfamily
-	\begin{block}{}
-	\item[] export PATH=/opt/apps/rhel7/Python-2.7.11/bin/:\$PATH
-	\end{block}
-	\sffamily
-\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-\frametitle{htseq-count}
-\begin{itemize}
-	\item What are its flags and options?
-	\footnotesize
-	\ttfamily
-	\begin{block}{}
-	\item[] htseq-count <options> <alignment bam> <gff file>  >  <count output>
-	\end{block}
 \end{itemize}
 \end{frame}
 
@@ -235,24 +214,6 @@ Duke University \\ % Your institution for the title page
 	\item[] 5-HT3C2	0
 	\item[] A1BG	252
 	\item[] A1BG-AS1	47
-	\end{block}
-	\sffamily
-\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-\frametitle{Combining htseq Output}
-\begin{itemize}
-	\item Check that they're all the same length (have the same rows):
-	\footnotesize
-	\ttfamily
-	\begin{block}{}
-	\item[] > wc -l s*counts
-	\item[]   45381 s01.counts
-	\item[]   45381 s01.norm.counts
-	\item[]   45381 s02.counts
-	\item[]   45381 s02.norm.counts
 	\end{block}
 	\sffamily
 \end{itemize}
@@ -371,10 +332,10 @@ Duke University \\ % Your institution for the title page
 	\footnotesize
 	\ttfamily
 	\begin{block}{}
-	\item[] > rownames(cts)
+	\item[] > rownames(coldata)
 	\item[] [1] "s01norm"  "s02norm"  "s03hypox" "s04hypox"
 	\item[] 
-	\item[] > colnames(cts)
+	\item[] > colnames(coldata)
 	\item[] [1] "condition" "type"
 	\end{block}
 	\sffamily
@@ -399,12 +360,105 @@ Duke University \\ % Your institution for the title page
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Today's Goals}
+\frametitle{DESeq2 Formatting Tips: Reading Data}
+\begin{itemize}
+	\item In R:
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+	\item[] > countfile <- read.table("hypoxia\_hsap.counts")
+	\item[] > head(countfile, n = 5)
+	\item[]        V1  V2  V3  V4  V5
+	\item[] 1 3.8-1.4   0   0   0   0
+	\item[] 2 3.8-1.5   0   0   0   0
+	\item[] 3 5-HT3C2   0   0   0   0
+	\item[] 4    A1BG 252 192 175 153
+	\end{block}
+	\sffamily
+	\item[] Now we need to get the data into matrices with the correct row and column names
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{DESeq2 Formatting Tips: Transforming Data}
+\begin{itemize}
+	\item \texttt{countfile} contains the count data
+	\item We need to format it appropriately 
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+	\item[] > cts <- as.matrix(countfile[,2:5])
+	\item[] > colnames(cts) <- c("s01norm","s02norm","s03hypox","s04hypox")
+	\item[] > rownames(cts) <- countfile[,1]
+	\item[] > head(cts, n = 4)
+	\item[]        s01norm s02norm s03hypox s04hypox
+	\item[] 3.8-1.4       0       0        0        0
+	\item[] 3.8-1.5       0       0        0        0
+	\item[] 5-HT3C2       0       0        0        0
+	\item[] A1BG        252     192      175      153 
+	\end{block}
+	\sffamily
+	\item[] First take in only the data (columns 2-5) as a matrix
+	\item[] Then name the columns the sample IDs
+	\item[] And the rows the geneIDs
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{DESeq2 Formatting: coldata matrix}
+\begin{itemize}
+	\item<+-> \texttt{coldata} needs to contain the appropriate sample info
+	\item<+-> Each row is a sample, each column is information about the sample
+	\item<+-> Experimental Treatment, Read Format, Cell Type can all be pertinent info
+	\item<+-> First we will make a vector with the information
+	\item<+-> Then we'll take the data and make it into a 2x4 matrix
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{DESeq2 Formatting: coldata matrix}
+\begin{itemize}
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+	\item[] > sampleinfo <- c("untreated","untreated","treated","treated",
+	\item[]     "paired-end","paired-end","paired-end","paired-end")
+	\item[] > sampleinfo
+	\item[] [1] "untreated"  "untreated"  "treated"    "treated"    "paired-end" "paired-end"
+	\item[] [7] "paired-end" "paired-end" 
+	\item[] > coldata <- matrix(sampleinfo, nrow = 4, ncol = 2, byrow = F)
+	\item[] > coldata
+	\item[]      [,1]        [,2]        
+	\item[] [1,] "untreated" "paired-end"
+	\item[] [2,] "untreated" "paired-end"
+	\item[] [3,] "treated"   "paired-end" 
+	\item[] [4,] "treated"   "paired-end" 
+	\end{block}
+	\sffamily
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{DESeq2 Formatting: coldata matrix}
+\begin{itemize}
+	\item<+-> \texttt{coldata} now needs correct row and column names
+	\item<+-> What should they be? (hint: it is in this slide deck)
+	\item<+-> Once you decide, use \texttt{rownames()} and \texttt{colnames()} to add them
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Today's (Remaining) Goals}
 \large
 \begin{enumerate}
-	\item<+-> Check tophat2 paths
-	\item<+-> Discuss htseq-count flags
 	\item<+-> Format data for DESeq
+	\item<+-> Successfully run DESeq
 \end{enumerate}
 \end{frame}
 
@@ -541,6 +595,74 @@ Duke University \\ % Your institution for the title page
 
 \end{itemize}
 \end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Plotting in DESeq2}
+\begin{itemize}
+	\item There are several ways to plot this data
+	\item[] 
+	\item You can used the built-in DESeq functions:
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+	\item[] > plotMA(res, ylim=c(-2,2))
+	\item[]
+	\item[] > plotCounts(dds, gene=which.min(res\$padj), intgroup="condition") 
+	\end{block}
+	\sffamily
+	\item Or the R plotting function:
+	\footnotesize
+	\ttfamily
+	\begin{block}{}
+	\item[] > plot(res\$log2FoldChange,-log(res\$padj))
+	\end{block}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Plotting in DESeq2}
+\begin{itemize}
+	\ttfamily
+	\begin{block}{}
+	\item[] > plotMA(res, ylim=c(-2,2))
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171109_plotMA.png}
+	\end{center}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Plotting in DESeq2}
+\begin{itemize}
+	\ttfamily
+	\begin{block}{}
+	\item[] > plotCounts(dds, gene=which.min(res\$padj), intgroup="condition") 
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171109_plotCounts.png}
+	\end{center}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Plotting in DESeq2}
+\begin{itemize}
+	\ttfamily
+	\begin{block}{}
+	\item[] > plot(res\$log2FoldChange,-log(res\$padj))
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171109_plot.png}
+	\end{center}
+\end{itemize}
+\end{frame}
+
+
 
 %------------------------------------------------
 \begin{frame}
