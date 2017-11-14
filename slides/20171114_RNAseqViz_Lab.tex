@@ -611,63 +611,63 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{ggplot and DESeq2}
-%%\begin{itemize}
-%%	\item Now how can we plot the data frame \texttt{resDF} with \texttt{ggplot} to match \texttt{plotMA}?
-%%	\ttfamily
-%%	\begin{block}{}
-%%	\item[] ggplot(dataframe, aes()) +
-%%	\item[] geom\_point() +
-%%	\item[] scale\_x\_log10()
-%%	\end{block}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{ggplot and DESeq2}
+\begin{itemize}
+	\item Now how can we plot the data frame \texttt{resDF} with \texttt{ggplot} to match \texttt{plotMA}?
+	\ttfamily
+	\begin{block}{}
+	\item[] ggplot(dataframe, aes()) +
+	\item[] geom\_point() +
+	\item[] scale\_x\_log10()
+	\end{block}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{ggplot and DESeq2}
-%%\begin{itemize}
-%%	\item Now how can we plot the data frame \texttt{resDF} with \texttt{ggplot} to match \texttt{plotMA}?
-%%	\ttfamily
-%%	\begin{block}{}
-%%	\item[] > resDF\$pcutoff <- resDF\$padj < .01
-%%	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = pcutoff)) + geom\_point(size = .5) + scale\_x\_log10()
-%%	\end{block}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{ggplot and DESeq2}
+\begin{itemize}
+	\item Now how can we plot the data frame \texttt{resDF} with \texttt{ggplot} to match \texttt{plotMA}?
+	\ttfamily
+	\begin{block}{}
+	\item[] > resDF\$pcutoff <- resDF\$padj < .01
+	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = pcutoff)) + geom\_point(size = .5) + scale\_x\_log10()
+	\end{block}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \subsection{Plotting}
 %------------------------------------------------
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{Plotting in DESeq2}
-%%\begin{itemize}
-%%	\ttfamily
-%%	\begin{block}{}
-%%	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = pcutoff)) + geom\_point(size = .5) + scale\_x\_log10()
-%%	\end{block}
-%%	\begin{center}
-%%	\includegraphics[width=.8\textwidth]{images_20171114_ggplot1.png}
-%%	\end{center}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{Plotting in DESeq2}
+\begin{itemize}
+	\ttfamily
+	\begin{block}{}
+	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = pcutoff)) + geom\_point(size = .5) + scale\_x\_log10()
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171114_ggplot1.png}
+	\end{center}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{Plotting in DESeq2}
-%%\begin{itemize}
-%%	\ttfamily
-%%	\begin{block}{}
-%%	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom\_point() + scale\_x\_log10()
-%%	\end{block}
-%%	\begin{center}
-%%	\includegraphics[width=.8\textwidth]{images_20171114_ggplot2.png}
-%%	\end{center}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{Plotting in DESeq2}
+\begin{itemize}
+	\ttfamily
+	\begin{block}{}
+	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom\_point() + scale\_x\_log10()
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171114_ggplot2.png}
+	\end{center}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \subsection{Investigating Further}
@@ -689,31 +689,31 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{ggplot and DESeq2}
-%%\begin{itemize}
-%%	\item Now how can we plot the data frame with text labels?
-%%	\ttfamily
-%%	\begin{block}{}
-%%	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom\_point(size = .1) + scale\_x\_log10() + geom\_text(aes(label = ifelse( padj < .01 ,rownames(resDF),'')), size = 2)
-%%	\end{block}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{ggplot and DESeq2}
+\begin{itemize}
+	\item Now how can we plot the data frame with text labels?
+	\ttfamily
+	\begin{block}{}
+	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom\_point(size = .1) + scale\_x\_log10() + geom\_text(aes(label = ifelse( padj < .01 ,rownames(resDF),'')), size = 2)
+	\end{block}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{Plotting in DESeq2}
-%%\begin{itemize}
-%%	\ttfamily
-%%	\footnotesize
-%%	\begin{block}{}
-%%	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom\_point(size = .1) + scale\_x\_log10() + geom\_text(aes(label = ifelse( padj < .01 ,rownames(resDF),'')), size = 2)
-%%	\end{block}
-%%	\begin{center}
-%%	\includegraphics[width=.8\textwidth]{images_20171114_ggplot3.png}
-%%	\end{center}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{Plotting in DESeq2}
+\begin{itemize}
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+	\item[] > ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom\_point(size = .1) + scale\_x\_log10() + geom\_text(aes(label = ifelse( padj < .01 ,rownames(resDF),'')), size = 2)
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171114_ggplot3.png}
+	\end{center}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \subsection{DESeq \& gene families}
@@ -738,58 +738,58 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{ggplot and DESeq2}
-%%\begin{itemize}
-%%	\item Now how about gene families?
-%%	\ttfamily
-%%	\footnotesize
-%%	\begin{block}{}
-%%	\item[] genes <- read.table("TIMM.genelist")
-%%	\item[] resDF\$genefam <- ".NULL"
-%%	\item[] 
-%%	\item[] for (n in 1:dim(genes)[1]) \{
-%%  	\item[] match <- which(rownames(resDF) == as.character(genes[n,1]))
-%%  	\item[] resDF\$genefam[match] <- "TIMM"
-%%	\item[] \}
-%%	\end{block}
-%%	\sffamily
-%%	\normalsize
-%%	\item[] Read in a list of the genes you want to identify
-%%	\item[] Add a column for ``gene family'' to the data frame
-%%	\item[] Loop through the list of genes, adding a label ``TIMM'' to the data
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{ggplot and DESeq2}
+\begin{itemize}
+	\item Now how about gene families?
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+	\item[] genes <- read.table("TIMM.genelist")
+	\item[] resDF\$genefam <- ".NULL"
+	\item[] 
+	\item[] for (n in 1:dim(genes)[1]) \{
+  	\item[] match <- which(rownames(resDF) == as.character(genes[n,1]))
+  	\item[] resDF\$genefam[match] <- "TIMM"
+	\item[] \}
+	\end{block}
+	\sffamily
+	\normalsize
+	\item[] Read in a list of the genes you want to identify
+	\item[] Add a column for ``gene family'' to the data frame
+	\item[] Loop through the list of genes, adding a label ``TIMM'' to the data
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{ggplot and DESeq2}
-%%\begin{itemize}
-%%	\ttfamily
-%%	\footnotesize
-%%	\begin{block}{}
-%%	\item[] ggplot(resDF \%>\% arrange(genefam), aes(y = log2FoldChange, x = baseMean, col = genefam)) + geom\_point( size = .5) + scale\_x\_log10()
-%%	\end{block}
-%%	\begin{center}
-%%	\includegraphics[width=.8\textwidth]{images_20171114_ggplot7.png}
-%%	\end{center}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{ggplot and DESeq2}
+\begin{itemize}
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+	\item[] ggplot(resDF \%>\% arrange(genefam), aes(y = log2FoldChange, x = baseMean, col = genefam)) + geom\_point( size = .5) + scale\_x\_log10()
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171114_ggplot7.png}
+	\end{center}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{ggplot and DESeq2}
-%%\begin{itemize}
-%%	\ttfamily
-%%	\footnotesize
-%%	\begin{block}{}
-%%	\item[] ggplot(resDF \%>\% arrange(genefam), aes(y = -log(padj), x = log2FoldChange, col = genefam)) + geom\_point()
-%%	\end{block}
-%%	\begin{center}
-%%	\includegraphics[width=.8\textwidth]{images_20171114_ggplot8.png}
-%%	\end{center}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{ggplot and DESeq2}
+\begin{itemize}
+	\ttfamily
+	\footnotesize
+	\begin{block}{}
+	\item[] ggplot(resDF \%>\% arrange(genefam), aes(y = -log(padj), x = log2FoldChange, col = genefam)) + geom\_point()
+	\end{block}
+	\begin{center}
+	\includegraphics[width=.8\textwidth]{images_20171114_ggplot8.png}
+	\end{center}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \begin{frame}

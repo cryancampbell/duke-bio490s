@@ -1,0 +1,207 @@
+---
+title: "DESeq Tutorial"
+output: html_document
+---
+
+install DESeq2
+```{r}
+## try http:// if https:// URLs are not supported
+source("https://bioconductor.org/biocLite.R")
+biocLite("DESeq2")
+biocLite("IHW")
+biocLite("vsn")
+biocLite("hexbin")
+biocLite("pheatmap")
+```
+
+load the library and the count file
+```{r}
+library("DESeq2")
+library("IHW")
+
+setwd("~/Documents/git_repos/duke-bio490s/labs/20171107_DESeq2/")
+list.files()
+countfile <- read.table("hypoxia_hsap5_clean.counts")
+```
+
+prepare the count file for use with DESeq2
+```{r}
+cts <- as.matrix(countfile[,2:6])
+colnames(cts) <- c("s01norm","s02norm","s03hypox","s04hypox","s05hypox")
+rownames(cts) <- countfile[,1]
+
+
+sampleinfo <- c("untreated","untreated","treated","treated","treated","paired-end","paired-end","paired-end","paired-end","paired-end")
+coldata <- matrix(sampleinfo, nrow = 5, ncol = 2, byrow = F)
+
+rownames(coldata) <- c("s01norm","s02norm","s03hypox","s04hypox","s05hypox")
+colnames(coldata) <- c("condition","type")
+
+head(cts, n = 5)
+tail(cts, n = 5)
+coldata
+```
+
+Create the DESeq dataset
+```{r}
+dds <- DESeqDataSetFromMatrix(countData = cts,
+                              colData = coldata,
+                              design = ~ condition)
+dds
+```
+
+Filter OUT genes/rows with low read counts & tell DESeq which condition is control
+```{r}
+keep <- rowSums(counts(dds)) >= 10
+dds <- dds[keep,]
+
+dds$condition <- relevel(dds$condition, ref = "untreated")
+
+dds
+```
+
+
+Run DESeq
+```{r}
+dds <- DESeq(dds)
+res <- results(dds)
+
+res
+
+```
+sort by pValue
+```{r}
+resOrdered <- res[order(res$pvalue),]
+
+resOrdered
+```
+
+summarize results
+```{r}
+summary(res)
+```
+
+how many genes had a p-value below 0.10/0.05/0.001
+```{r}
+sum(res$padj < 0.1, na.rm=TRUE)
+sum(res$padj < 0.1, na.rm=TRUE)/dim(res)[1]
+sum(res$padj < 0.05, na.rm=TRUE)
+sum(res$padj < 0.05, na.rm=TRUE)/dim(res)[1]
+sum(res$padj < 0.001, na.rm=TRUE)
+sum(res$padj < 0.001, na.rm=TRUE)/dim(res)[1]
+```
+try an alpha level of 0.05
+```{r}
+res05 <- results(dds, alpha=0.05)
+summary(res05)
+
+res001 <- results(dds, alpha=0.001)
+summary(res001)
+```
+
+
+```{r}
+plotMA(res, ylim=c(-2,2))
+plotMA(res05, ylim=c(-2,2))
+plotMA(res001, ylim=c(-2,2))
+```
+
+```{r}
+plotCounts(dds, gene=which.min(res$padj), intgroup="condition")
+
+plot(res$log2FoldChange,-log(res$padj))
+```
+
+```{r}
+library("ggplot2")
+
+resDF <- as.data.frame(res)
+
+resDF$pcutoff <- resDF$padj < .01
+
+ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = pcutoff)) + geom_point(size = .5) + scale_x_log10()
+
+ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom_point() + scale_x_log10()
+
+ggplot(resDF, aes(x = log2FoldChange, y = baseMean, col = -(padj))) + geom_point() + scale_y_log10()
+
+ggplot(resDF, aes(x = log2FoldChange, y = -log(pvalue), col = log(baseMean) )) + geom_point() + scale_y_log10()
+
+ggplot(resDF, aes(x = log2FoldChange, y = -log(padj), col = log(baseMean) )) + geom_point(size = .1) + scale_y_log10() + geom_text(aes(label = ifelse( padj < .001 & log2FoldChange > 2 ,rownames(resDF),'')), size = 2)
+
+ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom_point(size = .1) + scale_x_log10() + geom_text(aes(label = ifelse( padj < .01 ,rownames(resDF),'')), size = 2)
+
+ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = padj)) + geom_point(size = .1) + scale_x_log10() + geom_text(aes(label = ifelse( padj < .0005 ,rownames(resDF),'')), size = 2)
+
+```
+
+
+```{r}
+#three different normalizations
+vsd <- vst(dds, blind=FALSE)
+rld <- rlog(dds, blind=FALSE)
+ntd <- normTransform(dds)
+#head(assay(vsd), 3)
+
+```
+
+```{r}
+library("pheatmap")
+
+select <- order(rowMeans(counts(dds,normalized=TRUE)),
+                decreasing=TRUE)[1:20]
+df <- as.data.frame(colData(dds)[,c("condition","type")])
+
+pheatmap(assay(ntd)[select,], cluster_rows=FALSE, show_rownames=FALSE,
+         cluster_cols=FALSE, annotation_col=df)
+
+pheatmap(assay(vsd)[select,], cluster_rows=FALSE, show_rownames=FALSE,
+         cluster_cols=FALSE, annotation_col=df)
+
+pheatmap(assay(rld)[select,], cluster_rows=FALSE, show_rownames=FALSE,
+         cluster_cols=FALSE, annotation_col=df)
+
+```
+
+```{r}
+sampleDists <- dist(t(assay(vsd)))
+
+library("RColorBrewer")
+sampleDistMatrix <- as.matrix(sampleDists)
+rownames(sampleDistMatrix) <- paste(vsd$condition, vsd$type, sep="-")
+colnames(sampleDistMatrix) <- NULL
+colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+pheatmap(sampleDistMatrix,
+         clustering_distance_rows=sampleDists,
+         clustering_distance_cols=sampleDists,
+         col=colors)
+
+```
+
+```{r}
+plotPCA(vsd, intgroup=c("condition", "type"))
+
+```
+
+```{r}
+
+library("ggplot2")
+library("dplyr")
+genes <- read.table("TIMM.genelist")
+
+resDF$genefam <- ".NULL"
+
+for (n in 1:dim(genes)[1]) {
+  match <- which(rownames(resDF) == as.character(genes[n,1]))
+  resDF$genefam[match] <- "TIMM"
+}
+
+resDF[resDF$genefam == "TIMM",]
+
+ggplot(resDF, aes(y = log2FoldChange, x = baseMean, col = genefam)) + geom_point( size = .5) + scale_x_log10()
+
+ggplot(resDF %>% arrange(genefam), aes(y = log2FoldChange, x = baseMean, col = genefam)) + geom_point( size = 1) + scale_x_log10()
+
+ggplot(resDF %>% arrange(genefam), aes(y = -log(padj), x = log2FoldChange, col = genefam)) + geom_point()
+
+```
