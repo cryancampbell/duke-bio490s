@@ -1,0 +1,59 @@
+---
+title: "Probability"
+author: "CRyanCampbell"
+date: "11/28/2017"
+output: html_document
+---
+
+```{r}
+
+nulltest <- t.test(rnorm(10,0,1),rnorm(10,0,1),var.equal = T)
+
+nulltest$p.value
+
+t.test(rnorm(10,0,1),rnorm(10,0,1),var.equal = T)$p.value
+
+pvals <- 1:10000
+
+for (n in 1:10000) {
+  pvals[n] <- t.test(rnorm(10,0,1),rnorm(10,0,1),var.equal = T)$p.value
+}
+
+hist(pvals)
+
+```
+
+```{r}
+n <- 10
+k <- 6
+
+p <- seq(0,1,.01)
+
+prD <- (factorial(n) / (factorial(k) * factorial(n - k))) * p^k * (1 - p)^(n - k)
+
+plot(p,prD)
+
+
+
+```
+```{r}
+n <- 10
+k <- 6
+
+p <- seq(0,1,.05)
+
+prior <- c(1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1)
+
+prD <- (factorial(n) / (factorial(k) * factorial(n - k))) * p^k * (1 - p)^(n - k)
+
+post <- prD * prior
+
+plot(p,prD)
+
+plot(p,prior,type = "b")
+
+plot(p,post,type = "b")
+
+
+
+```

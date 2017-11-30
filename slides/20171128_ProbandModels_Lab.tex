@@ -178,17 +178,17 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{Some Quick Math}
-%%\begin{itemize}
-%%	\item[] Pr(B\textsubscript{1} given A) = .1/.3 = .333
-%%	\item[] Pr(B\textsubscript{2} given A) = .12/.3 = .4
-%%	\item[] Pr(A given B\textsubscript{2}) = .12/(.12 + .04) = .75
-%%	\begin{center}
-%%	\includegraphics[width=.7\textwidth]{images_20171128_condtionalprobs.png}
-%%	\end{center}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{Some Quick Math}
+\begin{itemize}
+	\item[] Pr(B\textsubscript{1} given A) = .1/.3 = .333
+	\item[] Pr(B\textsubscript{2} given A) = .12/.3 = .4
+	\item[] Pr(A given B\textsubscript{2}) = .12/(.12 + .04) = .75
+	\begin{center}
+	\includegraphics[width=.7\textwidth]{images_20171128_condtionalprobs.png}
+	\end{center}
+\end{itemize}
+\end{frame}
 
 
 %------------------------------------------------
@@ -204,20 +204,20 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{P-Value}
-%%In statistical hypothesis testing, the p-value or probability value is the probability for a given statistical model that, when the null hypothesis is true, the statistical summary (such as the sample mean difference between two compared groups) would be the same as or of greater magnitude than the actual observed results.
-%%\end{frame}
+\begin{frame}
+\frametitle{P-Value}
+In statistical hypothesis testing, the p-value or probability value is the probability for a given statistical model that, when the null hypothesis is true, the statistical summary (such as the sample mean difference between two compared groups) would be the same as or of greater magnitude than the actual observed results.
+\end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{P-Value}
-%%\begin{itemize}
-%%	\item<+-> Probability of the data (or greater ``magnitude'' data)
-%%	\item<+-> Given that the Null Hypothesis is true
-%%	\item<+-> Only \textit{pvalue}\% of the time, if treatment and control are equal, would you expect data this different
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{P-Value}
+\begin{itemize}
+	\item<+-> Probability of the data (or greater ``magnitude'' data)
+	\item<+-> Given that the Null Hypothesis is true
+	\item<+-> Only \textit{pvalue}\% of the time, if treatment and control are equal, would you expect data this different
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \section{Hypothesis Testing}
@@ -331,26 +331,26 @@ Duke University \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-%%\begin{frame}
-%%\frametitle{Let's Try an Example}
-%%\begin{itemize}
-%%	\item[] My code:
-%%	\ttfamily
-%%	\footnotesize
-%%\begin{block}{}
-%%	\item[]  pvals <- 1:10000
-%%	\item[]
-%%	\item[]  for (n in 1:10000) \{
-%%	\item[]  pvals[n] <- t.test(rnorm(10,0,1),rnorm(10,0,1),var.equal = T)\$p.value
-%%	\item[]  \}
-%%	\item[]
-%%	\item[]  hist(pvals)
-%%\end{block}
-%%\begin{center}
-%%	\includegraphics[width=0.3\textwidth]{images_20171128_R_pvals.png}
-%%\end{center}
-%%\end{itemize}
-%%\end{frame}
+\begin{frame}
+\frametitle{Let's Try an Example}
+\begin{itemize}
+	\item[] My code:
+	\ttfamily
+	\footnotesize
+\begin{block}{}
+	\item[]  pvals <- 1:10000
+	\item[]
+	\item[]  for (n in 1:10000) \{
+	\item[]  pvals[n] <- t.test(rnorm(10,0,1),rnorm(10,0,1),var.equal = T)\$p.value
+	\item[]  \}
+	\item[]
+	\item[]  hist(pvals)
+\end{block}
+\begin{center}
+	\includegraphics[width=0.3\textwidth]{images_20171128_R_pvals.png}
+\end{center}
+\end{itemize}
+\end{frame}
 
 %------------------------------------------------
 \subsection{Multiple Tests}
