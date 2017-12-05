@@ -9,6 +9,15 @@ http://htmlpreview.github.io/?https://github.com/cryancampbell/duke-bio490s/blob
 -------------------------------------------------
 ----Important Messages and Links Will Go Here----
 -------------------------------------------------
+
+Last Week of Class!
+Dec 5 & 7 - Class Presentations
+Final Project Rubric is posted in assignments -- DUE Dec 14 at 9AM
+
+At the end of class today please follow these instructions to fill out a Course Eval:
+https://github.com/cryancampbell/duke-bio490s/blob/master/slides/20171205_Course_Eval_Instructions.pdf
+
+
 Nov 2
 Voting has concluded!
 Rough Drafts will be due November 16th!

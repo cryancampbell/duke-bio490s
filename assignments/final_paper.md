@@ -10,7 +10,7 @@
 ### Format
 **.pdf only**
 * Written solely in paragraph form, this should read like a paper
-* No more than 8 pages, 1.5-spaced (excluding Bibliography)
+* No more than 8 pages, 1.5-spaced (excluding Bibliography and Appendices)
 * I have no preferred citation style, only the requirement that you cite in-text and include information that will allow me to easily find the paper
 * If you'd like to include information like file locations, please put them in an appendix (e.g. n=12 fly samples, 6 from the hypoxic condition and 6 from the control (see Appendix A).)
 * You must have: Abstract, Introduction, Methods, Results, Discussion and at least two figures
@@ -26,7 +26,7 @@ I will grade for the following content:
 10 pts - **Figures**        
 5 pts - **Grammar & Typos**     
 
-Late work will be accepted **only between 9am and 12pm on December 14th** and penalized 15 points.
+Late work will be accepted **only between 9am and 12pm on December 14th** and penalized 15 points. _**If nothing has been turned in by 12pm December 14th I will grade your Rough Draft as your final project**_.
 
 ### Grading Rubric
 
