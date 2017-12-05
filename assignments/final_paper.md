@@ -1,4 +1,4 @@
-# BIO490S - Rough Draft
+# BIO490S - Final Paper
 
 ## Basic Details
 **Due:** December 14, 9:00am, _no extensions!_  
